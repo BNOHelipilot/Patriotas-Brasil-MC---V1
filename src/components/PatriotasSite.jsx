@@ -272,8 +272,8 @@ export default function PatriotasSite() {
             </div>
             <div className="hidden sm:block">
               <div className="f-mad leading-none amber" style={{ fontSize: 28, letterSpacing: "0.05em" }}>PATRIOTAS</div>
-              <div className="f-stencil olive" style={{ fontSize: 28, letterSpacing: "0.4em" }}>BRASIL</div>
-              <div className="f-stencil olive" style={{ fontSize: 28, letterSpacing: "0.4em" }}>LE · MC</div>
+              <div className="f-stencil olive" style={{ fontSize: 9, letterSpacing: "0.4em" }}>BRASIL</div>
+              <div className="f-stencil olive" style={{ fontSize: 9, letterSpacing: "0.4em" }}>LE · MC</div>
             </div>
           </button>
 
