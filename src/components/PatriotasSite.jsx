@@ -397,24 +397,24 @@ export default function PatriotasSite() {
                   ENTRE EM CONTATO
                 </button>
               </div>
-            </div>
-          </div>
 
-          {/* stats */}
-          <div className="flex justify-center items-center gap-3 flex-wrap mx-auto">
-            {[
-              { n: "05", l: "PELOTÕES" },
-              { n: anosDeExistencia, l: "ANOS" },
-              { n: "XV", l: "FUNDADORES" },
-            ].map((s, i) => (
-              <div key={i} className="leather-card patch px-6 py-4 min-w-[90px] text-center"
-                style={{ borderColor: "rgba(201,151,58,0.35)" }}>
-                <div className="f-mad amber" style={{ fontSize: 36, lineHeight: 1 }}>{s.n}</div>
-                <div className="f-stencil" style={{ fontSize: 9, letterSpacing: "0.35em", color: "#6b6454", marginTop: 4 }}>
-                  {s.l}
-                </div>
+              {/* stats */}
+              <div className="flex justify-center items-center gap-3 flex-wrap mt-6">
+                {[
+                  { n: "V", l: "PELOTÕES" },
+                  { n: anosDeExistencia, l: "ANOS" },
+                  { n: "XV", l: "FUNDADORES" },
+                ].map((s, i) => (
+                  <div key={i} className="leather-card patch px-6 py-4 min-w-[90px] text-center"
+                    style={{ borderColor: "rgba(201,151,58,0.35)" }}>
+                    <div className="f-mad amber" style={{ fontSize: 36, lineHeight: 1 }}>{s.n}</div>
+                    <div className="f-stencil" style={{ fontSize: 9, letterSpacing: "0.35em", color: "#6b6454", marginTop: 4 }}>
+                      {s.l}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
 
