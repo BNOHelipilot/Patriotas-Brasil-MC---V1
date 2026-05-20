@@ -348,7 +348,7 @@ export default function PatriotasSite() {
             </div>
 
             {/* título + heráldica + lema + CTAs */}
-            <div className="flex-1 text-center lg:text-left">
+            <div className="flex-1 text-center">
               <h1 className="f-mad flicker leading-none mb-1"
                 style={{ fontSize: "clamp(54px,9vw,130px)", color: "#FFCC00", letterSpacing: "0.04em",
                   textShadow: "0 0 40px rgba(255,204,0,0.25), 0 2px 4px rgba(0,0,0,0.9)" }}>
@@ -372,7 +372,7 @@ export default function PatriotasSite() {
                 "VIDA LONGA AOS PATRIOTAS !"
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button onClick={() => scrollTo("sobre")}
                   className="px-8 py-3 f-rye transition-all"
                   style={{ background: "linear-gradient(135deg,#8a6520,#c9973a)", color: "#0e0d0b",
