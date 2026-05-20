@@ -271,8 +271,9 @@ export default function PatriotasSite() {
               <img src={BRASAO} alt="Patriotas MC" style={{ width:"140%", objectFit:"contain" }} />
             </div>
             <div className="hidden sm:block">
-              <div className="f-mad leading-none amber" style={{ fontSize: 16, letterSpacing: "0.05em" }}>PATRIOTAS</div>
-              <div className="f-stencil olive" style={{ fontSize: 9, letterSpacing: "0.4em" }}>BRASIL · LE · MC</div>
+              <div className="f-mad leading-none amber" style={{ fontSize: 28, letterSpacing: "0.05em" }}>PATRIOTAS</div>
+              <div className="f-stencil olive" style={{ fontSize: 28, letterSpacing: "0.4em" }}>BRASIL</div>
+              <div className="f-stencil olive" style={{ fontSize: 28, letterSpacing: "0.4em" }}>LE · MC</div>
             </div>
           </button>
 
