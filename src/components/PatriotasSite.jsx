@@ -364,7 +364,7 @@ export default function PatriotasSite() {
                 LE &nbsp;·&nbsp; MC
               </p>
 
-              <div className="divider mb-5 mx-auto" style={{ maxWidth: 400 }} />
+              <div className="divider mb-5" style={{ maxWidth: 400, marginLeft: "auto", marginRight: "auto" }} />
 
 
               <p className="f-rye mb-6"
