@@ -437,7 +437,7 @@ export default function PatriotasSite() {
           <h2 className="f-mad amber mb-16"
             style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em",
               textShadow: "0 2px 6px rgba(0,0,0,0.8)" }}>
-            NOSSA HISTóRIA
+            NOSSA HISTORIA
           </h2>
 
           {/* linha do tempo */}
