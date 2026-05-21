@@ -695,6 +695,9 @@ export default function PatriotasSite() {
               <img src={BRASAO_MC} alt="Brasão Patriotas Brasil MC"
                 style={{ width:"100%",
                   filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
+              <p className="f-body mt-4 text-center" style={{ fontSize: 13, color: "#8a7a5c", lineHeight: 1.8 }}>
+                Brasão do PATRIOTAS MOTO CLUBE.
+              </p>
             </div>
 
             {/* placeholder brasão MC DF */}
@@ -702,8 +705,10 @@ export default function PatriotasSite() {
               <img src={BRASAO_MC_DF} alt="Brasão Patriotas Brasil MC DF"
                 style={{ width:"100%",
                   filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
+              <p className="f-body mt-4 text-center" style={{ fontSize: 13, color: "#8a7a5c", lineHeight: 1.8 }}>
+                Brasão do PATRIOTAS MOTO CLUBE no estado.
+              </p>
             </div>
-
 
           </div>
 
@@ -715,7 +720,7 @@ export default function PatriotasSite() {
         <div className="absolute top-0 left-0 right-0 h-px"
           style={{ background: "linear-gradient(to right, transparent, rgba(201,151,58,0.3), transparent)" }} />
         <div className="max-w-6xl mx-auto">
-          <div className="section-tag">// CAPÍTULO 04 — COMANDO</div>
+          {/*<div className="section-tag">// CAPÍTULO 04 — COMANDO</div>*/}
           <h2 className="f-mad amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
             DIREÇÃO NACIONAL
           </h2>
@@ -747,15 +752,20 @@ export default function PatriotasSite() {
       <section id="pelotoes" className="relative py-28 px-6"
         style={{ background: "linear-gradient(180deg,#0e0d0b,#0f0e0b,#0e0d0b)" }}>
         <div className="max-w-6xl mx-auto">
-          <div className="section-tag">// CAPÍTULO 04 — EXPANSÃO</div>
+          {/*<div className="section-tag">// CAPÍTULO 04 — EXPANSÃO</div>*/}
           <h2 className="f-mad amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
             NOSSOS PELOTÕES
           </h2>
-          <p className="f-body mb-14" style={{ fontSize: 14, color: "#6b6454", maxWidth: 480, lineHeight: 1.8 }}>
+          <p className="f-body mb-10" style={{ fontSize: 14, color: "#6b6454", maxWidth: 480, lineHeight: 1.8 }}>
             Iniciamos em Manaus e expandimos pela nação. Cada pelotão carrega os mesmos valores e honra da sede nacional.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="flex justify-center mb-20">
+            <img src={ORGANO} alt="Organograma Patriotas Brasil MC"
+              style={{ maxWidth: "100%", filter: "drop-shadow(0 0 20px rgba(201,151,58,0.3))" }} />
+          </div>
+
+          {/*<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {pelotoes.map((p, i) => (
               <div key={i} className="leather-card patch p-6 transition-all"
                 style={{
@@ -787,7 +797,7 @@ export default function PatriotasSite() {
                 </div>
               </div>
             ))}
-          </div>
+          </div>*/}
         </div>
       </section>
 
