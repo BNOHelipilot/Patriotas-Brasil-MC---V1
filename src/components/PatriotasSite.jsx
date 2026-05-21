@@ -441,7 +441,7 @@ export default function PatriotasSite() {
           </h2>
 
           {/* linha do tempo */}
-          <div className="relative grid md:grid-cols-2 gap-8 mb-20">
+          <div className="relative grid md:grid-cols-3 gap-8 mb-20">
             {[
               {
                 data: "26 · ABR · 2016",
@@ -452,6 +452,11 @@ export default function PatriotasSite() {
                 data: "05 · ABR · 2021",
                 titulo: "A FUNDAÇÃO",
                 texto: `O Patriotas Brasil Moto Clube nasce oficialmente com 15 motociclistas. A data em que pela primeira vez vestimos nossas camisetas pretas e fomos reconhecidos como Moto Clube pela sociedade manauara. Em maio, recebemos as camisas cinza de botão na sede do nosso padrinho: o Moto Clube Open Road.`,
+              },
+              {
+                data: "xx · xxx · xxxx",
+                titulo: "LAW ENFORCMENT - LE",
+                texto: `O Patriotas Brasil Moto Clube passa a ser considerado LE bla bla bla .......`,
               },
             ].map((item, i) => (
               <div key={i} className="leather-card patch p-7 scratched"
@@ -469,7 +474,7 @@ export default function PatriotasSite() {
             ))}
           </div>
 
-          {/* missão e visão */}
+          {/* missão e visão
           <div className="grid md:grid-cols-2 gap-6 mb-20">
             {[
               { tag: "MISSÃO", texto: "Difundir o motociclismo regional, nacional e internacionalmente, cultuando o espírito da sã camaradagem, da fraternidade e do amor à Pátria." },
@@ -485,8 +490,9 @@ export default function PatriotasSite() {
                   {item.texto}
                 </p>
               </div>
+            
             ))}
-          </div>
+          </div> */}
 
           {/* valores */}
           <div className="section-tag mb-3">// VALORES E PRINCÍPIOS</div>
