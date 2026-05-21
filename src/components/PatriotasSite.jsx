@@ -366,17 +366,17 @@ export default function PatriotasSite() {
             {/* título + heráldica + lema + CTAs */}
             <div className="flex-1 text-center">
               <h1 className="f-mad flicker leading-none mb-1"
-                style={{ fontSize: "clamp(54px,9vw,130px)", color: "#FFCC00", letterSpacing: "0.04em",
+                style={{ fontSize: "clamp(54px,9vw,130px)", color: "#f1ee09", letterSpacing: "0.04em",
                   textShadow: "0 0 40px rgba(255,204,0,0.25), 0 2px 4px rgba(0,0,0,0.9)" }}>
                 PATRIOTAS
               </h1>
               <h2 className="f-mad leading-none mb-1"
-                style={{ fontFamily: "'PointedlyMad', 'Rye', serif", fontSize: "clamp(32px,6vw,80px)", color: "#FFCC00", letterSpacing: "0.06em",
+                style={{ fontFamily: "'PointedlyMad', 'Rye', serif", fontSize: "clamp(32px,6vw,80px)", color: "#f1ee09", letterSpacing: "0.06em",
                   textShadow: "0 2px 4px rgba(0,0,0,0.9)" }}>
                 BRASIL
               </h2>
               <p className="f-mad leading-none mb-5"
-                style={{ fontFamily: "'PointedlyMad', 'Rye', serif", fontSize: "clamp(14px,2.5vw,32px)", color: "#FFCC00", letterSpacing: "0.1em" }}>
+                style={{ fontFamily: "'PointedlyMad', 'Rye', serif", fontSize: "clamp(14px,2.5vw,32px)", color: "#f1ee09", letterSpacing: "0.1em" }}>
                 LE &nbsp;·&nbsp; MC
               </p>
 
@@ -399,7 +399,9 @@ export default function PatriotasSite() {
                 <button onClick={() => scrollTo("contato")}
                   className="px-8 py-3 f-rye transition-all patch"
                   style={{ background: "transparent", color: "#c9973a",
-                    fontSize: 13, letterSpacing: "0.1em", borderColor: "rgba(201,151,58,0.5)" }}>
+                    fontSize: 13, letterSpacing: "0.1em", border: "none",
+                    boxShadow: "0 4px 20px rgba(201,151,58,0.3), inset 0 1px 0 rgba(255,255,255,0.15)" }}>
+                    {/* fontSize: 13, letterSpacing: "0.1em", borderColor: "rgba(201,151,58,0.5)" }}> */}
                   ENTRE EM CONTATO
                 </button>
               </div>
@@ -441,7 +443,7 @@ export default function PatriotasSite() {
         <div className="max-w-6xl mx-auto">
           {/*<div className="section-tag">// CAPÍTULO 01 — HISTÓRIA</div>*/}
           <h2 className="f-mad amber mb-16"
-            style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em",
+            style={{ fontSize: "clamp(40px,7vw,80px)", color: "#f1ee09", lineHeight: 1, letterSpacing: "0.04em", 
               textShadow: "0 2px 6px rgba(0,0,0,0.8)" }}>
             NOSSA HISTORIA
           </h2>
@@ -529,13 +531,13 @@ export default function PatriotasSite() {
           style={{ background: "linear-gradient(to right, transparent, rgba(201,151,58,0.3), transparent)" }} />
         <div className="max-w-6xl mx-auto">
 
-          <div className="section-tag">// CAPÍTULO 02 — ORIGENS</div>
+          {/*<div className="section-tag">// CAPÍTULO 02 — ORIGENS</div>*/}
           <h2 className="f-mad amber mb-4"
-            style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
+            style={{ fontSize: "clamp(40px,7vw,80px)", color: "#f1ee09", lineHeight: 1, letterSpacing: "0.04em" }}>
             OS FUNDADORES
           </h2>
           <p className="f-body mb-16"
-            style={{ fontSize: 14, color: "#6b6454", maxWidth: 580, lineHeight: 1.9 }}>
+            style={{ fontSize: 14, color: "#6b6454", maxWidth: 700, lineHeight: 1.9 }}>
             Em 05 de abril de 2021, quinze motociclistas vestiram pela primeira vez a camiseta preta
             e fundaram o Patriotas Brasil Moto Clube em Manaus/AM. São eles a pedra sobre a qual
             a irmandade foi construída.
@@ -543,7 +545,7 @@ export default function PatriotasSite() {
 
           {/* ── FOTO COLETIVA ── */}
           <div className="mb-16">
-            <div className="section-tag mb-4">// A FUNDAÇÃO — FOTO COLETIVA</div>
+            {/*<div className="section-tag mb-4">// A FUNDAÇÃO — FOTO COLETIVA</div>*/}
             <div className="leather-card patch relative overflow-hidden"
               style={{ borderColor: "rgba(201,151,58,0.4)", aspectRatio: "16/7" }}>
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
@@ -570,7 +572,7 @@ export default function PatriotasSite() {
           </div>
 
           {/* ── GRID INDIVIDUAL ── */}
-          <div className="section-tag mb-6">// OS QUINZE</div>
+          {/*<div className="section-tag mb-6">// OS QUINZE</div>*/}
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
             {fundadores.map((f) => (
               <div key={f.id} className="leather-card patch text-center py-6 px-3 group"
