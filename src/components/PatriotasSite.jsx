@@ -434,7 +434,7 @@ export default function PatriotasSite() {
             </span>
             <div className="h-px flex-1" style={{ background: "linear-gradient(to left, rgba(201,151,58,0.3), transparent)" }}/>
           </div>
-          
+
       </section>
 
       {/* ════════════════ SOBRE ════════════════ */}
@@ -634,15 +634,15 @@ export default function PatriotasSite() {
       <section id="brasao" className="relative py-28 px-6"
         style={{ background: "linear-gradient(180deg,#0e0d0b 0%,#12100d 50%,#0e0d0b 100%)" }}>
         <div className="max-w-6xl mx-auto">
-          <div className="section-tag">// CAPÍTULO 03 — IDENTIDADE</div>
-          <h2 className="f-mad amber mb-16" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
+          {/*<div className="section-tag">// CAPÍTULO 03 — IDENTIDADE</div>*/}
+          <h2 className="f-mad amber mb-16" style={{ fontSize: "clamp(40px,7vw,80px)", color: "#f1ee09", lineHeight: 1, letterSpacing: "0.04em" }}>
             O BRASÃO
           </h2>
 
           <div className="grid md:grid-cols-2 gap-14 items-center">
             {/* placeholder brasão */}
             <div className="relative flex items-center justify-center" style={{ maxWidth: 560 }}>
-              <img src={BRASAO} alt="Brasão Patriotas Brasil MC"
+              <img src={BRASAO} alt="Brasão Patriotas Brasil LE MC"
                 style={{ width:"100%",
                   filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
             </div>
@@ -657,10 +657,10 @@ export default function PatriotasSite() {
               </p>
               <div className="space-y-5">
                 {[
-                  { t: "A CAVEIRA", d: "Símbolo de igualdade entre os integrantes e do destino que a todos une", c: "#c9973a" },
-                  { t: "O CAPACETE VINTAGE", d: "Tributo aos primeiros motociclistas e à tradição das duas rodas", c: "#c9973a" },
-                  { t: "AS ASAS DA PÁTRIA", d: "Cores da Bandeira Nacional — o amor ao Brasil que nos move", c: "#7a8c5c" },
-                  { t: "AS FAIXAS", d: "PATRIOTAS no topo, BRASIL na base — nosso nome e nossa origem", c: "#7a8c5c" },
+                  { t: "A CAVEIRA", d: "Símbolo de igualdade entre os integrantes e do destino que a todos une.", c: "#c9973a" },
+                  { t: "O CAPACETE VINTAGE", d: "Tributo aos primeiros motociclistas e à tradição das duas rodas.", c: "#c9973a" },
+                  { t: "AS ASAS DA PÁTRIA", d: "Cores da Bandeira Nacional — o amor ao Brasil que nos move.", c: "#7a8c5c" },
+                  { t: "AS FAIXAS", d: "PATRIOTAS no topo, BRASIL na base — nosso nome e nossa origem.", c: "#7a8c5c" },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 items-start">
                     <div className="w-0.5 mt-1 self-stretch" style={{ background: item.c, minHeight: 36, opacity: 0.6 }} />
@@ -673,6 +673,32 @@ export default function PatriotasSite() {
               </div>
             </div>
           </div>
+
+          <div className="grid md:grid-cols-3 gap-14 items-center">
+            {/* placeholder brasão MG */}
+            <div className="relative flex items-center justify-center" style={{ maxWidth: 560 }}>
+              <img src={BRASAO_MG} alt="Brasão Patriotas Brasil MG"
+                style={{ width:"100%",
+                  filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
+            </div>
+          
+            {/* placeholder brasão MC */}
+            <div className="relative flex items-center justify-center" style={{ maxWidth: 560 }}>
+              <img src={BRASAO_MC} alt="Brasão Patriotas Brasil MC"
+                style={{ width:"100%",
+                  filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
+            </div>
+
+            {/* placeholder brasão MC DF */}
+            <div className="relative flex items-center justify-center" style={{ maxWidth: 560 }}>
+              <img src={BRASAO_MC_DF} alt="Brasão Patriotas Brasil MC DF"
+                style={{ width:"100%",
+                  filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
+            </div>
+
+
+          </div>
+
         </div>
       </section>
 
