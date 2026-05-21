@@ -421,7 +421,7 @@ export default function PatriotasSite() {
 
         {/* scroll hint */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <div className="f-stencil" style={{ fontSize: 9, letterSpacing: "0.4em", color: "#4a4035" }}>SCROLL</div>
+          <div className="f-stencil" style={{ fontSize: 9, letterSpacing: "0.4em", color: "#4a4035" }}>MAIS</div>
           <div className="w-px h-10"
             style={{ background: "linear-gradient(to bottom, rgba(201,151,58,0.5), transparent)" }} />
         </div>
