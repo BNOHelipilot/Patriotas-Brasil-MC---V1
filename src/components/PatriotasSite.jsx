@@ -398,10 +398,9 @@ export default function PatriotasSite() {
                 </button>
                 <button onClick={() => scrollTo("contato")}
                   className="px-8 py-3 f-rye transition-all patch"
-                  style={{ background: "transparent", color: "#c9973a",
+                  style={{ background: "linear-gradient(135deg,#8a6520,#c9973a)", color: "#0e0d0b",
                     fontSize: 13, letterSpacing: "0.1em", border: "none",
                     boxShadow: "0 4px 20px rgba(201,151,58,0.3), inset 0 1px 0 rgba(255,255,255,0.15)" }}>
-                    {/* fontSize: 13, letterSpacing: "0.1em", borderColor: "rgba(201,151,58,0.5)" }}> */}
                   ENTRE EM CONTATO
                 </button>
               </div>
@@ -427,12 +426,15 @@ export default function PatriotasSite() {
           </div>
         </div>
 
-        {/* scroll hint */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <div className="f-stencil" style={{ fontSize: 9, letterSpacing: "0.4em", color: "#4a4035" }}>MAIS</div>
-          <div className="w-px h-10"
-            style={{ background: "linear-gradient(to bottom, rgba(201,151,58,0.5), transparent)" }} />
-        </div>
+        {/* Nota de rodapé */}
+          <div className="mt-10 flex items-center gap-4">
+            <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(201,151,58,0.3), transparent)" }}/>
+            <span className="f-stencil" style={{ fontSize: 9, color: "#3a3028", letterSpacing: "0.3em" }}>
+              MANAUS · AM · XVI · IV · MMXVI
+            </span>
+            <div className="h-px flex-1" style={{ background: "linear-gradient(to left, rgba(201,151,58,0.3), transparent)" }}/>
+          </div>
+          
       </section>
 
       {/* ════════════════ SOBRE ════════════════ */}
@@ -521,6 +523,16 @@ export default function PatriotasSite() {
               </div>
             ))}
           </div>
+
+          {/* Nota de rodapé */}
+          <div className="mt-10 flex items-center gap-4">
+            <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(201,151,58,0.3), transparent)" }}/>
+            <span className="f-stencil" style={{ fontSize: 9, color: "#3a3028", letterSpacing: "0.3em" }}>
+              MANAUS · AM · XVI · IV · MMXVI
+            </span>
+            <div className="h-px flex-1" style={{ background: "linear-gradient(to left, rgba(201,151,58,0.3), transparent)" }}/>
+          </div>
+
         </div>
       </section>
 
@@ -539,8 +551,7 @@ export default function PatriotasSite() {
           <p className="f-body mb-16"
             style={{ fontSize: 14, color: "#6b6454", maxWidth: 700, lineHeight: 1.9 }}>
             Em 05 de abril de 2021, quinze motociclistas vestiram pela primeira vez a camiseta preta
-            e fundaram o Patriotas Brasil Moto Clube em Manaus/AM. São eles a pedra sobre a qual
-            a irmandade foi construída.
+            e fundaram o Patriotas Brasil Moto Clube em Manaus/AM.
           </p>
 
           {/* ── FOTO COLETIVA ── */}
@@ -556,7 +567,7 @@ export default function PatriotasSite() {
                   <path d="M21 15l-5-5L5 21"/>
                 </svg>
                 <span className="f-stencil" style={{ fontSize: 10, letterSpacing: "0.4em", color: "#2a2518" }}>
-                  FOTO DOS 15 FUNDADORES · 05 · ABR · 2021
+                  FOTO DOS 15 FUNDADORES · 26 · ABR · 2016
                 </span>
               </div>
               {/* Overlay cantos com data */}
@@ -610,7 +621,7 @@ export default function PatriotasSite() {
           <div className="mt-10 flex items-center gap-4">
             <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(201,151,58,0.3), transparent)" }}/>
             <span className="f-stencil" style={{ fontSize: 9, color: "#3a3028", letterSpacing: "0.3em" }}>
-              MANAUS · AM · 05 · ABRIL · MMXXI
+              MANAUS · AM · XVI · IV · MMXVI
             </span>
             <div className="h-px flex-1" style={{ background: "linear-gradient(to left, rgba(201,151,58,0.3), transparent)" }}/>
           </div>
