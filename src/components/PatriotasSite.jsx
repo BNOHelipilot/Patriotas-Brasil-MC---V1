@@ -433,11 +433,11 @@ export default function PatriotasSite() {
           style={{ background: "linear-gradient(to right, transparent, rgba(122,140,92,0.4), transparent)" }} />
 
         <div className="max-w-6xl mx-auto">
-          <div className="section-tag">// CAPÍTULO 01 — HISTÓRIA</div>
+          {/*<div className="section-tag">// CAPÍTULO 01 — HISTÓRIA</div>*/}
           <h2 className="f-mad amber mb-16"
             style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em",
               textShadow: "0 2px 6px rgba(0,0,0,0.8)" }}>
-            NOSSA HISTÓRIA
+            NOSSA HISTóRIA
           </h2>
 
           {/* linha do tempo */}
