@@ -19,6 +19,7 @@ const F13 = "/images/fundador13.png";
 const F14 = "/images/fundador14.png";
 const F15 = "/images/fundador15.png";
 const FONT_URL = "/fonts/PointedlyMad.ttf";
+const ORGANO = "/fonts/organograma patriotas.png";
 
 export default function PatriotasSite() {
   const [scrolled, setScrolled] = useState(false);
@@ -65,11 +66,11 @@ export default function PatriotasSite() {
   ];
 
   const pelotoes = [
-    { cidade: "MANAUS", uf: "AM", tipo: "SEDE NACIONAL", destaque: true, ano: "2021" },
-    { cidade: "RIO DE JANEIRO", uf: "RJ", tipo: "PELOTÃO", destaque: false, ano: "—" },
-    { cidade: "BRASÍLIA", uf: "DF", tipo: "PELOTÃO", destaque: false, ano: "—" },
-    { cidade: "MATO GROSSO", uf: "MT", tipo: "PELOTÃO", destaque: false, ano: "—" },
-    { cidade: "SÃO PAULO", uf: "SP", tipo: "PELOTÃO", destaque: false, ano: "—" },
+    { cidade: "MANAUS", uf: "AM", tipo: "PELOTÃO / SEDE NACIONAL", destaque: true, ano: "2016" },
+    { cidade: "BRASÍLIA", uf: "DF", tipo: "PELOTÃO", destaque: false, ano: "2020" },
+    { cidade: "RIO DE JANEIRO", uf: "RJ", tipo: "PELOTÃO", destaque: false, ano: "2021" },
+    { cidade: "CAMPO GRANDE", uf: "MS", tipo: "PELOTÃO", destaque: false, ano: "2023" },
+    { cidade: "TAUBATÉ", uf: "SP", tipo: "PELOTÃO", destaque: false, ano: "2026" },
   ];
 
   const diretoria = [
@@ -77,14 +78,15 @@ export default function PatriotasSite() {
     { cargo: "VICE-PRESIDENTE", desc: "Responsável pela disciplina do clube e pela atividade de Inteligência e Informações." },
     { cargo: "SARGENTO D'ARMAS", desc: "Zela pela segurança dos membros e familiares nos eventos e deslocamentos." },
     { cargo: "SECRETÁRIO", desc: "Elabora atas, guarda a memória e planeja os eventos com Relações Públicas." },
-    { cargo: "TESOUREIRO", desc: "Movimenta as contas bancárias e elabora os balancetes financeiros trimestrais." },
+    { cargo: "TESOUREIRO", desc: "Controle financeiro." },
     { cargo: "RELAÇÕES PÚBLICAS", desc: "Registro fotográfico, mídias sociais e divulgação dos eventos do clube." },
   ];
 
   const hierarquia = [
-    { nivel: "AMIGO", cor: "#6b7280", desc: "Convidado dos membros para eventos do Moto Clube. Sem direito a voto ou brasão.", camisa: null },
+    { nivel: "AMIGO", cor: "#0656f5", desc: "Convidado dos membros para eventos do Moto Clube.", camisa: null },
     { nivel: "ASPIRANTE", cor: "#9ca3af", desc: "Camisa cinza. Período de avaliação de 6 meses. Mínimo 600km percorridos em passeios oficiais.", camisa: "CINZA" },
     { nivel: "MEMBRO", cor: "#eab308", desc: "Camisa preta. Direito a voto. Uso completo do brasão. Aprovação de 90% dos membros da UF.", camisa: "PRETA" },
+    { nivel: "MEMBRO NOMADE", cor: "#eab308", desc: "Camisa preta. Direito a voto. Uso completo do brasão. Aprovação de 90% dos membros da UF.", camisa: "PRETA" },
   ];
 
   const fundadores = [
@@ -106,9 +108,10 @@ export default function PatriotasSite() {
   ];
 
   const presidentes = [
-    { nome: "A DEFINIR", periodo: "2021 – 2023", local: "Manaus · AM" },
-    { nome: "A DEFINIR", periodo: "2023 – 2025", local: "Manaus · AM" },
-    { nome: "A DEFINIR", periodo: "2025 – atual", local: "Manaus · AM" },
+    { nome: "MORAES", periodo: "2021 – 2023", local: "Manaus · AM" },
+    { nome: "PEREIRA SOUZA", periodo: "2023 – 2025", local: "Manaus · AM" },
+    { nome: "BRAGA", periodo: "2025 – 2026", local: "Manaus · AM" },
+    { nome: "FABINHO", periodo: "2026 – atual", local: "Manaus · AM" },
   ];
 
   const galeria = Array(9).fill(null).map((_, i) => ({
@@ -122,7 +125,7 @@ export default function PatriotasSite() {
     { id: "sobre", label: "SOBRE" },
     { id: "fundadores", label: "FUNDADORES" },
     { id: "direcao", label: "DIREÇÃO" },
-    { id: "pelotoes", label: "PELOTÕES" },
+    { id: "pelotoes", label: "PELOTOES" },
     { id: "hierarquia", label: "HIERARQUIA" },
     { id: "presidentes", label: "PRESIDENTES" },
     { id: "galeria", label: "GALERIA" },
@@ -441,17 +444,22 @@ export default function PatriotasSite() {
           </h2>
 
           {/* linha do tempo */}
-          <div className="relative grid md:grid-cols-3 gap-8 mb-20">
+          <div className="relative grid md:grid-cols-2 gap-8 mb-20">
             {[
               {
                 data: "26 · ABR · 2016",
-                titulo: "A SEMENTE",
+                titulo: "A SEMENTE - MG",
                 texto: `Em Manaus, um grupo de militares das Forças Armadas e Auxiliares se reunia nos finais de semana para percorrer as estradas da cidade. Nascia o Patriotas Moto Grupo AM — unido pela paixão ao motociclismo e pelos princípios compartilhados na farda.`,
               },
               {
                 data: "05 · ABR · 2021",
-                titulo: "A FUNDAÇÃO",
+                titulo: "A FUNDAÇÃO - MC",
                 texto: `O Patriotas Brasil Moto Clube nasce oficialmente com 15 motociclistas. A data em que pela primeira vez vestimos nossas camisetas pretas e fomos reconhecidos como Moto Clube pela sociedade manauara. Em maio, recebemos as camisas cinza de botão na sede do nosso padrinho: o Moto Clube Open Road.`,
+              },
+              {
+                data: "xx · xxx · xxxx",
+                titulo: "CRIAÇÃO DOS PELOTÕES - MC DF",
+                texto: `O Patriotas Brasil Moto Clube com seus irmãos sendo transferidos tem inicio aos demais pelotões, iniciando por Brasília, passando pelo Rio de Janeiro, Campo Grande e São Paulo.`,
               },
               {
                 data: "xx · xxx · xxxx",
@@ -495,8 +503,8 @@ export default function PatriotasSite() {
           </div> */}
 
           {/* valores */}
-          <div className="section-tag mb-3">// VALORES E PRINCÍPIOS</div>
-          <h3 className="f-mad mb-10" style={{ fontSize: 40, color: "#c9973a", letterSpacing: "0.04em" }}>
+          {/*<div className="section-tag mb-3">// VALORES E PRINCÍPIOS</div>*/}
+          <h3 className="f-mad mb-10" style={{ fontSize: 40, color: "#f1ee09", letterSpacing: "0.04em" }}>
             O QUE NOS MOVE
           </h3>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3">
