@@ -675,21 +675,19 @@ export default function PatriotasSite() {
 
 
           </div>
-          <h3 className="f-mad mb-10" style={{ fontSize: 40, color: "#f1ee09", letterSpacing: "0.04em" }}>
+          <h3 className="f-mad mt-20 mb-10" style={{ fontSize: 40, color: "#f1ee09", letterSpacing: "0.04em" }}>
             HISTORICO DE BRASÕES
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-14 items-center">
+          <div className="grid md:grid-cols-3 gap-14 items-start">
             {/* placeholder brasão MG */}
-            <div className="relative flex items-center justify-center" style={{ maxWidth: 560 }}>
+            <div className="flex flex-col items-center">
               <img src={BRASAO_MG} alt="Brasão Patriotas Brasil MG"
                 style={{ width:"100%",
                   filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
-              
-                <p className="f-body mb-8" style={{ fontSize: 14, color: "#8a7a5c", lineHeight: 1.8, textAlign: "justify" }}>
-                  Brasão do PATRIOTAS MOTO GRUPO.
-                </p>
-            
+              <p className="f-body mt-4 text-center" style={{ fontSize: 13, color: "#8a7a5c", lineHeight: 1.8 }}>
+                Brasão do PATRIOTAS MOTO GRUPO.
+              </p>
             </div>
           
             {/* placeholder brasão MC */}
