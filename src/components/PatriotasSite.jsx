@@ -489,28 +489,7 @@ export default function PatriotasSite() {
             ))}
           </div>
 
-          {/* missão e visão
-          <div className="grid md:grid-cols-2 gap-6 mb-20">
-            {[
-              { tag: "MISSÃO", texto: "Difundir o motociclismo regional, nacional e internacionalmente, cultuando o espírito da sã camaradagem, da fraternidade e do amor à Pátria." },
-              { tag: "VISÃO", texto: "Ser respeitado e reconhecido no meio motociclístico nacional e internacional." },
-            ].map((item, i) => (
-              <div key={i} className="relative p-7 patch"
-                style={{ background: "linear-gradient(135deg,rgba(74,92,64,0.12),rgba(14,13,11,0.9))",
-                  borderColor: "rgba(122,140,92,0.35)" }}>
-                <h3 className="f-mad mb-4" style={{ fontSize: 28, color: "#e8e0cc", letterSpacing: "0.05em" }}>
-                  {item.tag}
-                </h3>
-                <p className="f-body" style={{ fontSize: 14, color: "#8a7a5c", lineHeight: 1.7, textAlign: "justify" }}>
-                  {item.texto}
-                </p>
-              </div>
-            
-            ))}
-          </div> */}
-
           {/* valores */}
-          {/*<div className="section-tag mb-3">// VALORES E PRINCÍPIOS</div>*/}
           <h3 className="f-mad mb-10" style={{ fontSize: 40, color: "#f1ee09", letterSpacing: "0.04em" }}>
             O QUE NOS MOVE
           </h3>
@@ -543,7 +522,6 @@ export default function PatriotasSite() {
           style={{ background: "linear-gradient(to right, transparent, rgba(201,151,58,0.3), transparent)" }} />
         <div className="max-w-6xl mx-auto">
 
-          {/*<div className="section-tag">// CAPÍTULO 02 — ORIGENS</div>*/}
           <h2 className="f-mad amber mb-4"
             style={{ fontSize: "clamp(40px,7vw,80px)", color: "#f1ee09", lineHeight: 1, letterSpacing: "0.04em" }}>
             OS FUNDADORES
@@ -556,7 +534,6 @@ export default function PatriotasSite() {
 
           {/* ── FOTO COLETIVA ── */}
           <div className="mb-16">
-            {/*<div className="section-tag mb-4">// A FUNDAÇÃO — FOTO COLETIVA</div>*/}
             <div className="leather-card patch relative overflow-hidden"
               style={{ borderColor: "rgba(201,151,58,0.4)", aspectRatio: "16/7" }}>
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
@@ -583,7 +560,6 @@ export default function PatriotasSite() {
           </div>
 
           {/* ── GRID INDIVIDUAL ── */}
-          {/*<div className="section-tag mb-6">// OS QUINZE</div>*/}
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
             {fundadores.map((f) => (
               <div key={f.id} className="leather-card patch text-center py-6 px-3 group"
@@ -634,7 +610,6 @@ export default function PatriotasSite() {
       <section id="brasao" className="relative py-28 px-6"
         style={{ background: "linear-gradient(180deg,#0e0d0b 0%,#12100d 50%,#0e0d0b 100%)" }}>
         <div className="max-w-6xl mx-auto">
-          {/*<div className="section-tag">// CAPÍTULO 03 — IDENTIDADE</div>*/}
           <h2 className="f-mad amber mb-16" style={{ fontSize: "clamp(40px,7vw,80px)", color: "#f1ee09", lineHeight: 1, letterSpacing: "0.04em" }}>
             O BRASÃO
           </h2>
@@ -720,7 +695,6 @@ export default function PatriotasSite() {
         <div className="absolute top-0 left-0 right-0 h-px"
           style={{ background: "linear-gradient(to right, transparent, rgba(201,151,58,0.3), transparent)" }} />
         <div className="max-w-6xl mx-auto">
-          {/*<div className="section-tag">// CAPÍTULO 04 — COMANDO</div>*/}
           <h2 className="f-mad amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
             DIREÇÃO NACIONAL
           </h2>
@@ -752,7 +726,6 @@ export default function PatriotasSite() {
       <section id="pelotoes" className="relative py-28 px-6"
         style={{ background: "linear-gradient(180deg,#0e0d0b,#0f0e0b,#0e0d0b)" }}>
         <div className="max-w-6xl mx-auto">
-          {/*<div className="section-tag">// CAPÍTULO 04 — EXPANSÃO</div>*/}
           <h2 className="f-mad amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
             NOSSOS PELOTÕES
           </h2>
@@ -765,39 +738,7 @@ export default function PatriotasSite() {
               style={{ maxWidth: "100%", filter: "drop-shadow(0 0 20px rgba(201,151,58,0.3))" }} />
           </div>
 
-          {/*<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {pelotoes.map((p, i) => (
-              <div key={i} className="leather-card patch p-6 transition-all"
-                style={{
-                  borderColor: p.destaque ? "rgba(201,151,58,0.7)" : "rgba(122,140,92,0.25)",
-                  background: p.destaque
-                    ? "linear-gradient(135deg,rgba(201,151,58,0.08),rgba(14,13,11,0.9))"
-                    : undefined,
-                }}>
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <div className="f-stencil mb-1"
-                      style={{ fontSize: 9, letterSpacing: "0.35em", color: p.destaque ? "#c9973a" : "#6b6454" }}>
-                      {p.tipo}
-                    </div>
-                    <div className="f-mad" style={{ fontSize: 26, color: p.destaque ? "#c9973a" : "#e8e0cc", letterSpacing: "0.04em" }}>
-                      {p.cidade}
-                    </div>
-                  </div>
-                  <div className="patch px-2 py-1 f-mad"
-                    style={{ fontSize: 20, borderColor: p.destaque ? "rgba(201,151,58,0.6)" : "rgba(122,140,92,0.3)", color: p.destaque ? "#c9973a" : "#7a8c5c" }}>
-                    {p.uf}
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5" style={{ background: p.destaque ? "#c9973a" : "#4a5c40" }} />
-                  <span className="f-stencil" style={{ fontSize: 9, letterSpacing: "0.3em", color: "#4a4035" }}>
-                    FUNDADO · {p.ano}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>*/}
+          
         </div>
       </section>
 
@@ -806,7 +747,6 @@ export default function PatriotasSite() {
         <div className="absolute top-0 left-0 right-0 h-px"
           style={{ background: "linear-gradient(to right, transparent, rgba(122,140,92,0.4), transparent)" }} />
         <div className="max-w-5xl mx-auto">
-          <div className="section-tag">// CAPÍTULO 05 — JORNADA</div>
           <h2 className="f-mad amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
             A JORNADA
           </h2>
@@ -852,7 +792,6 @@ export default function PatriotasSite() {
       <section id="presidentes" className="relative py-28 px-6"
         style={{ background: "linear-gradient(180deg,#0e0d0b,#100f0c,#0e0d0b)" }}>
         <div className="max-w-6xl mx-auto">
-          <div className="section-tag">// CAPÍTULO 06 — LEGADO</div>
           <h2 className="f-mad amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
             PRESIDENTES NACIONAIS
           </h2>
@@ -899,7 +838,6 @@ export default function PatriotasSite() {
         <div className="absolute top-0 left-0 right-0 h-px"
           style={{ background: "linear-gradient(to right, transparent, rgba(201,151,58,0.3), transparent)" }} />
         <div className="max-w-6xl mx-auto">
-          <div className="section-tag">// CAPÍTULO 07 — MEMÓRIA</div>
           <h2 className="f-mad amber mb-14" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
             GALERIA DOS PATRIOTAS
           </h2>
