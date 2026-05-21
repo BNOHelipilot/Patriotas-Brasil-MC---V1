@@ -685,9 +685,11 @@ export default function PatriotasSite() {
               <img src={BRASAO_MG} alt="Brasão Patriotas Brasil MG"
                 style={{ width:"100%",
                   filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
-              <p className="f-body mb-8" style={{ fontSize: 14, color: "#8a7a5c", lineHeight: 1.8, textAlign: "justify" }}>
-                Brasão do PATRIOTAS MOTO GRUPO.
-              </p>
+              
+                <p className="f-body mb-8" style={{ fontSize: 14, color: "#8a7a5c", lineHeight: 1.8, textAlign: "justify" }}>
+                  Brasão do PATRIOTAS MOTO GRUPO.
+                </p>
+            
             </div>
           
             {/* placeholder brasão MC */}
