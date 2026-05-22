@@ -343,17 +343,17 @@ export default function PatriotasSite() {
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 anim-fadeup">
 
-          {/* badge fundação */}
+          {/* badge fundação
           <div className="flex justify-center mb-8">
             <div className="inline-flex items-center gap-3 px-5 py-2 patch"
               style={{ borderColor: "rgba(122,140,92,0.5)", background: "rgba(14,13,11,0.7)" }}>
               <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#7a8c5c" }} />
               {/*<span className="f-stencil olive" style={{ fontSize: 10, letterSpacing: "0.35em" }}>
                 XXVI · IV · MMXXI · MANAUS · AM
-              </span>*/}
+              </span>
               <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#7a8c5c" }} />
             </div>
-          </div>
+          </div>*/}
 
           {/* 2 colunas: brasão | texto */}
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-14 mb-10">
@@ -459,17 +459,17 @@ export default function PatriotasSite() {
             {[
               {
                 data: "26 · ABR · 2016",
-                titulo: "A SEMENTE - Moto Grupo",
+                titulo: "A SEMENTE - MOTO GRUPO",
                 texto: `Em Manaus, um grupo de militares das Forças Armadas e Auxiliares se reunia nos finais de semana para percorrer as estradas da cidade. Nascia o Patriotas Moto Grupo AM — unido pela paixão ao motociclismo e pelos princípios compartilhados na farda.`,
               },
               {
                 data: "05 · ABR · 2021",
-                titulo: "A FUNDAÇÃO - Moto Clube",
+                titulo: "A FUNDAÇÃO - MOTO CLUBE",
                 texto: `O Patriotas Brasil Moto Clube nasce oficialmente com 15 motociclistas. A data em que pela primeira vez vestimos nossas camisetas pretas e fomos reconhecidos como Moto Clube pela sociedade manauara. Em maio, recebemos as camisas cinza de botão na sede do nosso padrinho: o Moto Clube Open Road.`,
               },
               {
                 data: "xx · xxx · xxxx",
-                titulo: "CRIAÇÃO DOS PELOTÕES - Moto Clube AM",
+                titulo: "CRIAÇÃO DOS PELOTÕES - MOTO CLUBE AM",
                 texto: `O Patriotas Brasil Moto Clube com seus irmãos sendo transferidos tem inicio aos demais pelotões, iniciando por Brasília, passando pelo Rio de Janeiro, Campo Grande e São Paulo.`,
               },
               {
@@ -531,9 +531,8 @@ export default function PatriotasSite() {
             OS FUNDADORES
           </h2>
           <p className="f-body mb-16"
-            style={{ fontSize: 14, color: "#6b6454", maxWidth: 700, lineHeight: 1.9 }}>
-            Em 05 de abril de 2021, quinze motociclistas vestiram pela primeira vez a camiseta preta
-            e fundaram o Patriotas Brasil Moto Clube em Manaus/AM.
+            style={{ fontSize: 14, color: "#6b6454", maxWidth: 700, lineHeight: 1.9, whiteSpace: "nowrap" }}>
+            Em 05 de abril de 2021, quinze motociclistas vestiram pela primeira vez a camiseta preta e fundaram o Patriotas Brasil Moto Clube em Manaus/AM.
           </p>
 
           {/* ── FOTO COLETIVA ── */}
@@ -690,7 +689,14 @@ export default function PatriotasSite() {
             </div>
 
           </div>
-
+          {/* Nota de rodapé */}
+          <div className="mt-10 flex items-center gap-4">
+            <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(201,151,58,0.3), transparent)" }}/>
+            <span className="f-stencil" style={{ fontSize: 9, color: "#3a3028", letterSpacing: "0.3em" }}>
+              MANAUS · AM · XVI · IV · MMXVI
+            </span>
+            <div className="h-px flex-1" style={{ background: "linear-gradient(to left, rgba(201,151,58,0.3), transparent)" }}/>
+          </div>
         </div>
       </section>
 
