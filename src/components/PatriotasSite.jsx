@@ -19,6 +19,7 @@ const F13 = "/images/fundador13.png";
 const F14 = "/images/fundador14.png";
 const F15 = "/images/fundador15.png";
 const FONT_URL = "/fonts/PointedlyMad.ttf";
+const FONT_SANCREEK = "/fonts/sancreek.regular.ttf";
 const ORGANO = "/images/organograma patriotas.png";
 const BRASAO_MC = "/images/brasao_mc.png";
 const BRASAO_MG = "/images/brasao_mg.png";
@@ -32,7 +33,9 @@ export default function PatriotasSite() {
 
   useEffect(() => {
     const s = document.createElement("style");
-    s.textContent = "@font-face { font-family: 'PointedlyMad'; src: url('" + FONT_URL + "') format('truetype'); font-display: swap; }";
+    s.textContent =
+      "@font-face { font-family: 'PointedlyMad'; src: url('" + FONT_URL + "') format('truetype'); font-display: swap; } " +
+      "@font-face { font-family: 'Sancreek'; src: url('" + FONT_SANCREEK + "') format('truetype'); font-display: swap; }";
     document.head.appendChild(s);
   }, []);
 
