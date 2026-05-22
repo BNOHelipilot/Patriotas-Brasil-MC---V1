@@ -348,9 +348,9 @@ export default function PatriotasSite() {
             <div className="inline-flex items-center gap-3 px-5 py-2 patch"
               style={{ borderColor: "rgba(122,140,92,0.5)", background: "rgba(14,13,11,0.7)" }}>
               <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#7a8c5c" }} />
-              <span className="f-stencil olive" style={{ fontSize: 10, letterSpacing: "0.35em" }}>
+              {/*<span className="f-stencil olive" style={{ fontSize: 10, letterSpacing: "0.35em" }}>
                 XXVI · IV · MMXXI · MANAUS · AM
-              </span>
+              </span>*/}
               <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#7a8c5c" }} />
             </div>
           </div>
@@ -459,22 +459,22 @@ export default function PatriotasSite() {
             {[
               {
                 data: "26 · ABR · 2016",
-                titulo: "A SEMENTE - MG",
+                titulo: "A SEMENTE - Moto Grupo",
                 texto: `Em Manaus, um grupo de militares das Forças Armadas e Auxiliares se reunia nos finais de semana para percorrer as estradas da cidade. Nascia o Patriotas Moto Grupo AM — unido pela paixão ao motociclismo e pelos princípios compartilhados na farda.`,
               },
               {
                 data: "05 · ABR · 2021",
-                titulo: "A FUNDAÇÃO - MC",
+                titulo: "A FUNDAÇÃO - Moto Clube",
                 texto: `O Patriotas Brasil Moto Clube nasce oficialmente com 15 motociclistas. A data em que pela primeira vez vestimos nossas camisetas pretas e fomos reconhecidos como Moto Clube pela sociedade manauara. Em maio, recebemos as camisas cinza de botão na sede do nosso padrinho: o Moto Clube Open Road.`,
               },
               {
                 data: "xx · xxx · xxxx",
-                titulo: "CRIAÇÃO DOS PELOTÕES - MC DF",
+                titulo: "CRIAÇÃO DOS PELOTÕES - Moto Clube AM",
                 texto: `O Patriotas Brasil Moto Clube com seus irmãos sendo transferidos tem inicio aos demais pelotões, iniciando por Brasília, passando pelo Rio de Janeiro, Campo Grande e São Paulo.`,
               },
               {
                 data: "xx · xxx · xxxx",
-                titulo: "LAW ENFORCMENT - LE",
+                titulo: "LEMC - LAW ENFORCMENT MOTO CLUBE",
                 texto: `O Patriotas Brasil Moto Clube passa a ser considerado LE bla bla bla .......`,
               },
             ].map((item, i) => (
