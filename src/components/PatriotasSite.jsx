@@ -636,9 +636,10 @@ export default function PatriotasSite() {
               <div className="space-y-5">
                 {[
                   { t: "A CAVEIRA", d: "Símbolo de igualdade entre os integrantes e do destino que a todos une.", c: "#c9973a" },
-                  { t: "O CAPACETE VINTAGE", d: "Tributo aos primeiros motociclistas e à tradição das duas rodas.", c: "#c9973a" },
+                  { t: "O CAPACETE VINTAGE", d: "Tributo aos primeiros motociclistas e à tradição das duas rodas.", c: "#7a8c5c" },
                   { t: "AS ASAS DA PÁTRIA", d: "Cores da Bandeira Nacional — o amor ao Brasil que nos move.", c: "#7a8c5c" },
-                  { t: "AS FAIXAS", d: "PATRIOTAS no topo, BRASIL na base — nosso nome e nossa origem.", c: "#7a8c5c" },
+                  { t: "AS FAIXAS", d: "PATRIOTAS no topo, BRASIL na base — nosso nome e nossa origem.", c: "#c9973a" },
+                  { t: "LE MC", d: "LAW ENFORCMENT MOTO CLUBE.", c: "#7a8c5c" },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 items-start">
                     <div className="w-0.5 mt-1 self-stretch" style={{ background: item.c, minHeight: 36, opacity: 0.6 }} />
@@ -669,7 +670,7 @@ export default function PatriotasSite() {
             </div>
           
             {/* placeholder brasão MC */}
-            <div className="relative flex items-center justify-center" style={{ maxWidth: 560 }}>
+            <div className="flex flex-col items-center" >
               <img src={BRASAO_MC} alt="Brasão Patriotas Brasil MC"
                 style={{ width:"100%",
                   filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
