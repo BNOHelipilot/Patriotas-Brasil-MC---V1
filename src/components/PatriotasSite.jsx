@@ -150,6 +150,7 @@ export default function PatriotasSite() {
         .f-rye    { font-family: 'Rye', serif; }
         .f-stencil{ font-family: 'Special Elite', monospace; }
         .f-body   { font-family: 'Oswald', sans-serif; }
+        .f-sans   { font-family: 'Sancreek', serif; }
 
         /* ── COURO / TEXTURA ── */
         .leather-bg {
@@ -286,7 +287,7 @@ export default function PatriotasSite() {
               <img src={BRASAO} alt="Patriotas MC" style={{ width:"160%", objectFit:"contain" }} />
             </div>
             <div className="hidden sm:block">
-              <div className="f-mad leading-none amber" style={{ fontSize: 28, letterSpacing: "0.05em" }}>PATRIOTAS</div>
+              <div className="f-sans leading-none amber" style={{ fontSize: 28, letterSpacing: "0.05em" }}>PATRIOTAS</div>
               <div className="f-stencil olive" style={{ fontSize: 12, letterSpacing: "0.4em" }}>BRASIL</div>
               <div className="f-stencil olive" style={{ fontSize: 12, letterSpacing: "0.4em" }}>LE · MC</div>
             </div>
