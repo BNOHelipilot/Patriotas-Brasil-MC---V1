@@ -342,19 +342,7 @@ export default function PatriotasSite() {
           style={{ background: "linear-gradient(to right, transparent, rgba(201,151,58,0.6), transparent)" }} />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 anim-fadeup">
-
-          {/* badge fundação
-          <div className="flex justify-center mb-8">
-            <div className="inline-flex items-center gap-3 px-5 py-2 patch"
-              style={{ borderColor: "rgba(122,140,92,0.5)", background: "rgba(14,13,11,0.7)" }}>
-              <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#7a8c5c" }} />
-              {/*<span className="f-stencil olive" style={{ fontSize: 10, letterSpacing: "0.35em" }}>
-                XXVI · IV · MMXXI · MANAUS · AM
-              </span>
-              <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#7a8c5c" }} />
-            </div>
-          </div>*/}
-
+        
           {/* 2 colunas: brasão | texto */}
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-14 mb-10">
 
@@ -370,17 +358,17 @@ export default function PatriotasSite() {
             {/* título + heráldica + lema + CTAs */}
             <div className="flex-1 text-center">
               <h1 className="f-mad flicker leading-none mb-1"
-                style={{ fontSize: "clamp(54px,9vw,130px)", letterSpacing: "0.04em",
+                style={{ fontSize: "clamp(54px,9vw,130px)", color: "#fad608", letterSpacing: "0.04em",
                   textShadow: "0 0 40px rgba(255,204,0,0.25), 0 2px 4px rgba(0,0,0,0.9)" }}>
                 PATRIOTAS
               </h1>
               <h2 className="f-mad leading-none mb-1"
-                style={{ fontFamily: "'PointedlyMad', 'Rye', serif", fontSize: "clamp(32px,6vw,80px)", color: "#f1ee09", letterSpacing: "0.06em",
+                style={{ fontFamily: "'PointedlyMad', 'Rye', serif", fontSize: "clamp(32px,6vw,80px)", color: "#fad608", letterSpacing: "0.06em",
                   textShadow: "0 2px 4px rgba(0,0,0,0.9)" }}>
                 BRASIL
               </h2>
               <p className="f-mad leading-none mb-5"
-                style={{ fontFamily: "'PointedlyMad', 'Rye', serif", fontSize: "clamp(14px,2.5vw,32px)", color: "#f1ee09", letterSpacing: "0.1em" }}>
+                style={{ fontFamily: "'PointedlyMad', 'Rye', serif", fontSize: "clamp(14px,2.5vw,32px)", color: "#fad608", letterSpacing: "0.1em" }}>
                 LE &nbsp;·&nbsp; MC
               </p>
 
@@ -415,11 +403,12 @@ export default function PatriotasSite() {
                   { n: "V", l: "PELOTÕES" },
                   { n: anosDeExistencia, l: "ANOS" },
                   { n: "XV", l: "FUNDADORES" },
+                  { n: "CII", l: "INTEGRANTES" },
                 ].map((s, i) => (
                   <div key={i} className="leather-card patch px-6 py-4 min-w-[90px] text-center"
                     style={{ borderColor: "rgba(201,151,58,0.35)" }}>
                     <div className="f-mad amber" style={{ fontSize: 36, lineHeight: 1 }}>{s.n}</div>
-                    <div className="f-stencil" style={{ fontSize: 9, letterSpacing: "0.35em", color: "#6b6454", marginTop: 4 }}>
+                    <div className="f-stencil" style={{ fontSize: 13, letterSpacing: "0.35em", color: "#6b6454", marginTop: 4 }}>
                       {s.l}
                     </div>
                   </div>
@@ -433,7 +422,7 @@ export default function PatriotasSite() {
         {/* Nota de rodapé */}
           <div className="mt-10 flex items-center gap-4">
             <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(201,151,58,0.3), transparent)" }}/>
-            <span className="f-stencil" style={{ fontSize: 9, color: "#3a3028", letterSpacing: "0.3em" }}>
+            <span className="f-stencil" style={{ fontSize: 11, color: "#3a3028", letterSpacing: "0.3em" }}>
               MANAUS · AM · XVI · IV · MMXVI
             </span>
             <div className="h-px flex-1" style={{ background: "linear-gradient(to left, rgba(201,151,58,0.3), transparent)" }}/>
@@ -448,10 +437,10 @@ export default function PatriotasSite() {
 
         <div className="max-w-6xl mx-auto">
           {/*<div className="section-tag">// CAPÍTULO 01 — HISTÓRIA</div>*/}
-          <h2 className="f-mad amber mb-16"
-            style={{ fontSize: "clamp(40px,7vw,80px)", color: "#f1ee09", lineHeight: 1, letterSpacing: "0.04em", 
+          <h2 className="f-sans amber mb-16"
+            style={{ fontSize: "clamp(40px,7vw,80px)", color: "#fad608", lineHeight: 1, letterSpacing: "0.04em", 
               textShadow: "0 2px 6px rgba(0,0,0,0.8)" }}>
-            NOSSA HISTORIA
+            NOSSA HISTÓRIA
           </h2>
 
           {/* linha do tempo */}
@@ -480,13 +469,13 @@ export default function PatriotasSite() {
             ].map((item, i) => (
               <div key={i} className="leather-card patch p-7 scratched"
                 style={{ borderColor: i === 0 ? "rgba(122,140,92,0.4)" : "rgba(201,151,58,0.4)" }}>
-                <div className="f-stencil mb-3" style={{ fontSize: 10, letterSpacing: "0.35em", color: i === 0 ? "#7a8c5c" : "#c9973a" }}>
+                <div className="f-stencil mb-3" style={{ fontSize: 12, letterSpacing: "0.35em", color: i === 0 ? "#7a8c5c" : "#c9973a" }}>
                   {item.data}
                 </div>
-                <h3 className="f-mad mb-4" style={{ fontSize: 28, color: "#e8e0cc", letterSpacing: "0.05em" }}>
+                <h3 className="f-sans mb-4" style={{ fontSize: 28, color: "#e8e0cc", letterSpacing: "0.05em" }}>
                   {item.titulo}
                 </h3>
-                <p className="f-body" style={{ fontSize: 14, color: "#8a7a5c", lineHeight: 1.7, textAlign: "justify" }}>
+                <p className="f-body" style={{ fontSize: 18, color: "#8a7a5c", lineHeight: 1.7, textAlign: "justify" }}>
                   {item.texto}
                 </p>
               </div>
