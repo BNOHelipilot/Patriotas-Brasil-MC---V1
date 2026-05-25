@@ -370,7 +370,7 @@ export default function PatriotasSite() {
             {/* título + heráldica + lema + CTAs */}
             <div className="flex-1 text-center">
               <h1 className="f-mad flicker leading-none mb-1"
-                style={{ fontSize: "clamp(54px,9vw,130px)", color: "#f1ee09", letterSpacing: "0.04em",
+                style={{ fontSize: "clamp(54px,9vw,130px)", letterSpacing: "0.04em",
                   textShadow: "0 0 40px rgba(255,204,0,0.25), 0 2px 4px rgba(0,0,0,0.9)" }}>
                 PATRIOTAS
               </h1>
