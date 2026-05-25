@@ -61,14 +61,14 @@ export default function PatriotasSite() {
   };
 
   const valores = [
-    { n: "01", t: "RESPEITO", d: "Tratar as pessoas com atenção, estima e fraternidade" },
-    { n: "02", t: "INTEGRIDADE", d: "Agir sempre com honestidade, decência e dentro da Lei" },
-    { n: "03", t: "AMIZADE", d: "Reciprocidade entre os integrantes, extensivo aos familiares" },
-    { n: "04", t: "COMPROMISSO", d: "Acatar as decisões da Presidência, ratificada pelo clube" },
-    { n: "05", t: "HONRADEZ", d: "Conduta pautada na probidade e respeito perante a sociedade" },
-    { n: "06", t: "LEALDADE", d: "Fidelidade aos compromissos, agindo com responsabilidade" },
-    { n: "07", t: "DISCIPLINA", d: "Obediência às regras que asseguram o bem-estar da coletividade" },
-    { n: "08", t: "PARTICIPAÇÃO", d: "Tomar parte das atividades com responsabilidade e zelo" },
+    { n: "01", t: "RESPEITO", d: "Tratar as pessoas com atenção, estima e fraternidade." },
+    { n: "02", t: "INTEGRIDADE", d: "Agir sempre com honestidade, decência e dentro da Lei." },
+    { n: "03", t: "AMIZADE", d: "Reciprocidade entre os integrantes, extensivo aos familiares." },
+    { n: "04", t: "COMPROMISSO", d: "Acatar as decisões da Presidência, ratificada pelo clube." },
+    { n: "05", t: "HONRADEZ", d: "Conduta pautada na probidade e respeito perante a sociedade." },
+    { n: "06", t: "LEALDADE", d: "Fidelidade aos compromissos, agindo com responsabilidade." },
+    { n: "07", t: "DISCIPLINA", d: "Obediência às regras que asseguram o bem-estar da coletividade." },
+    { n: "08", t: "PARTICIPAÇÃO", d: "Tomar parte das atividades com responsabilidade e zelo." },
   ];
 
   const pelotoes = [
@@ -291,8 +291,8 @@ export default function PatriotasSite() {
             </div>
             <div className="hidden sm:block">
               <div className="f-sans leading-none amber" style={{ fontSize: 28, letterSpacing: "0.05em" }}>PATRIOTAS</div>
-              <div className="f-stencil olive" style={{ fontSize: 12, letterSpacing: "0.4em" }}>BRASIL</div>
-              <div className="f-stencil olive" style={{ fontSize: 12, letterSpacing: "0.4em" }}>LE · MC</div>
+              <div className="f-stencil olive" style={{ fontSize: 13, letterSpacing: "0.4em" }}>BRASIL</div>
+              <div className="f-stencil olive" style={{ fontSize: 13, letterSpacing: "0.4em" }}>LE · MC</div>
             </div>
           </button>
 
@@ -301,7 +301,7 @@ export default function PatriotasSite() {
               <button key={s.id} onClick={() => scrollTo(s.id)}
                 className="f-stencil px-3 py-2 transition-all"
                 style={{
-                  fontSize: 13,
+                  fontSize: 14,
                   letterSpacing: "0.25em",
                   color: activeSection === s.id ? "#c9973a" : "#6b6454",
                 }}>
@@ -324,7 +324,7 @@ export default function PatriotasSite() {
             {navLinks.map((s) => (
               <button key={s.id} onClick={() => scrollTo(s.id)}
                 className="block w-full text-left px-6 py-3 f-stencil transition-colors"
-                style={{ fontSize: 11, letterSpacing: "0.3em", color: "#8a7a5c" }}>
+                style={{ fontSize: 12, letterSpacing: "0.3em", color: "#8a7a5c" }}>
                 {s.label}
               </button>
             ))}
@@ -403,7 +403,7 @@ export default function PatriotasSite() {
                   { n: "V", l: "PELOTÕES" },
                   { n: anosDeExistencia, l: "ANOS" },
                   { n: "XV", l: "FUNDADORES" },
-                  { n: "CII", l: "INTEGRANTES" },
+                  { n: "CII", l: "PATRIOTAS" },
                 ].map((s, i) => (
                   <div key={i} className="leather-card patch px-6 py-4 min-w-[90px] text-center"
                     style={{ borderColor: "rgba(201,151,58,0.35)" }}>
@@ -422,7 +422,7 @@ export default function PatriotasSite() {
         {/* Nota de rodapé */}
           <div className="mt-10 flex items-center gap-4">
             <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(201,151,58,0.3), transparent)" }}/>
-            <span className="f-stencil" style={{ fontSize: 11, color: "#3a3028", letterSpacing: "0.3em" }}>
+            <span className="f-stencil" style={{ fontSize: 12, color: "#3a3028", letterSpacing: "0.3em" }}>
               MANAUS · AM · XVI · IV · MMXVI
             </span>
             <div className="h-px flex-1" style={{ background: "linear-gradient(to left, rgba(201,151,58,0.3), transparent)" }}/>
@@ -436,7 +436,6 @@ export default function PatriotasSite() {
           style={{ background: "linear-gradient(to right, transparent, rgba(122,140,92,0.4), transparent)" }} />
 
         <div className="max-w-6xl mx-auto">
-          {/*<div className="section-tag">// CAPÍTULO 01 — HISTÓRIA</div>*/}
           <h2 className="f-sans amber mb-16"
             style={{ fontSize: "clamp(40px,7vw,80px)", color: "#fad608", lineHeight: 1, letterSpacing: "0.04em", 
               textShadow: "0 2px 6px rgba(0,0,0,0.8)" }}>
@@ -469,13 +468,13 @@ export default function PatriotasSite() {
             ].map((item, i) => (
               <div key={i} className="leather-card patch p-7 scratched"
                 style={{ borderColor: i === 0 ? "rgba(122,140,92,0.4)" : "rgba(201,151,58,0.4)" }}>
-                <div className="f-stencil mb-3" style={{ fontSize: 12, letterSpacing: "0.35em", color: i === 0 ? "#7a8c5c" : "#c9973a" }}>
+                <div className="f-stencil mb-3" style={{ fontSize: 13, letterSpacing: "0.35em", color: i === 0 ? "#7a8c5c" : "#c9973a" }}>
                   {item.data}
                 </div>
-                <h3 className="f-sans mb-4" style={{ fontSize: 28, color: "#e8e0cc", letterSpacing: "0.05em" }}>
+                <h3 className="f-sans mb-4" style={{ fontSize: 28, color: i === 0 ? "#7a8c5c" : "#c9973a", letterSpacing: "0.05em" }}>
                   {item.titulo}
                 </h3>
-                <p className="f-body" style={{ fontSize: 18, color: "#8a7a5c", lineHeight: 1.7, textAlign: "justify" }}>
+                <p className="f-body" style={{ fontSize: 18, color: i === 0 ? "#7a8c5c" : "#c9973a", lineHeight: 1.7, textAlign: "justify" }}>
                   {item.texto}
                 </p>
               </div>
@@ -483,15 +482,15 @@ export default function PatriotasSite() {
           </div>
 
           {/* valores */}
-          <h3 className="f-mad mb-10" style={{ fontSize: 40, color: "#f1ee09", letterSpacing: "0.04em" }}>
+          <h3 className="f-sans mb-10" style={{ fontSize: 40, color: "#fad608", letterSpacing: "0.04em" }}>
             O QUE NOS MOVE
           </h3>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3">
             {valores.map((v) => (
               <div key={v.n} className="leather-card p-5 group transition-all"
                 style={{ borderColor: "rgba(122,140,92,0.25)" }}>
-                <div className="f-mad mb-2" style={{ fontSize: 18, color: "#e8e0cc", letterSpacing: "0.05em" }}>{v.t}</div>
-                <div className="f-body" style={{ fontSize: 12, color: "#6b6454", lineHeight: 1.6 }}>{v.d}</div>
+                <div className="f-sans mb-2" style={{ fontSize: 22, color: "#e8e0cc", letterSpacing: "0.05em" }}>{v.t}</div>
+                <div className="f-body" style={{ fontSize: 14, color: "#6b6454", lineHeight: 1.6 }}>{v.d}</div>
               </div>
             ))}
           </div>
@@ -499,7 +498,7 @@ export default function PatriotasSite() {
           {/* Nota de rodapé */}
           <div className="mt-10 flex items-center gap-4">
             <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(201,151,58,0.3), transparent)" }}/>
-            <span className="f-stencil" style={{ fontSize: 9, color: "#3a3028", letterSpacing: "0.3em" }}>
+            <span className="f-stencil" style={{ fontSize: 12, color: "#3a3028", letterSpacing: "0.3em" }}>
               MANAUS · AM · XVI · IV · MMXVI
             </span>
             <div className="h-px flex-1" style={{ background: "linear-gradient(to left, rgba(201,151,58,0.3), transparent)" }}/>
@@ -515,12 +514,12 @@ export default function PatriotasSite() {
           style={{ background: "linear-gradient(to right, transparent, rgba(201,151,58,0.3), transparent)" }} />
         <div className="max-w-6xl mx-auto">
 
-          <h2 className="f-mad amber mb-4"
-            style={{ fontSize: "clamp(40px,7vw,80px)", color: "#f1ee09", lineHeight: 1, letterSpacing: "0.04em" }}>
+          <h2 className="f-sans amber mb-4"
+            style={{ fontSize: "clamp(40px,7vw,80px)", color: "#fad608", lineHeight: 1, letterSpacing: "0.04em" }}>
             OS FUNDADORES
           </h2>
           <p className="f-body mb-16"
-            style={{ fontSize: 14, color: "#6b6454", maxWidth: 700, lineHeight: 1.9, whiteSpace: "nowrap" }}>
+            style={{ fontSize: 16, color: "#6b6454", maxWidth: 700, lineHeight: 1.9, whiteSpace: "nowrap" }}>
             Em 05 de abril de 2021, quinze motociclistas vestiram pela primeira vez a camiseta preta e fundaram o Patriotas Brasil Moto Clube em Manaus/AM.
           </p>
 
@@ -572,12 +571,12 @@ export default function PatriotasSite() {
 
                 {/* Número do fundador */}
                 <div className="f-stencil amber mt-2 mb-1"
-                  style={{ fontSize: 10, letterSpacing: "0.35em" }}>
+                  style={{ fontSize: 12, letterSpacing: "0.35em" }}>
                   FUNDADOR {String(f.id).padStart(2,"0")}
                 </div>
 
                 {/* Nome */}
-                <div className="f-mad" style={{ fontSize: 15, color: "#e8e0cc", letterSpacing: "0.04em", lineHeight: 1.2 }}>
+                <div className="f-mad" style={{ fontSize: 18, color: "#fad608", letterSpacing: "0.04em", lineHeight: 1.2 }}>
                   {f.nome}
                 </div>
 
@@ -588,7 +587,7 @@ export default function PatriotasSite() {
           {/* Nota de rodapé */}
           <div className="mt-10 flex items-center gap-4">
             <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(201,151,58,0.3), transparent)" }}/>
-            <span className="f-stencil" style={{ fontSize: 9, color: "#3a3028", letterSpacing: "0.3em" }}>
+            <span className="f-stencil" style={{ fontSize: 12, color: "#3a3028", letterSpacing: "0.3em" }}>
               MANAUS · AM · XVI · IV · MMXVI
             </span>
             <div className="h-px flex-1" style={{ background: "linear-gradient(to left, rgba(201,151,58,0.3), transparent)" }}/>
@@ -602,7 +601,7 @@ export default function PatriotasSite() {
       <section id="brasao" className="relative py-28 px-6"
         style={{ background: "linear-gradient(180deg,#0e0d0b 0%,#12100d 50%,#0e0d0b 100%)" }}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="f-mad amber mb-16" style={{ fontSize: "clamp(40px,7vw,80px)", color: "#f1ee09", lineHeight: 1, letterSpacing: "0.04em" }}>
+          <h2 className="f-sans amber mb-16" style={{ fontSize: "clamp(40px,7vw,80px)", color: "#f1ee09", lineHeight: 1, letterSpacing: "0.04em" }}>
             O BRASÃO
           </h2>
 
@@ -616,25 +615,25 @@ export default function PatriotasSite() {
 
             {/* descrição */}
             <div>
-              <h3 className="f-mad mb-6" style={{ fontSize: 30, color: "#e8e0cc", letterSpacing: "0.05em" }}>
+              <h3 className="f-sans mb-6" style={{ fontSize: 30, color: "#fad608", letterSpacing: "0.05em" }}>
                 HERÁLDICA
               </h3>
-              <p className="f-body mb-8" style={{ fontSize: 14, color: "#8a7a5c", lineHeight: 1.8, textAlign: "justify" }}>
+              <p className="f-body mb-8" style={{ fontSize: 16, color: "#8a7a5c", lineHeight: 1.8, textAlign: "justify" }}>
                 O brasão e a bandeira representam a identidade visual do Moto Clube, através da caveira alada com as asas estampadas nas cores da Bandeira do Brasil, com as inscrições "PATRIOTAS" na faixa superior e "BRASIL" na faixa inferior.
               </p>
               <div className="space-y-5">
                 {[
-                  { t: "A CAVEIRA", d: "Símbolo de igualdade entre os integrantes e do destino que a todos une.", c: "#c9973a" },
+                  { t: "A CAVEIRA", d: "Símbolo de igualdade entre os integrantes e do destino que a todos une.", c: "#fad608" },
                   { t: "O CAPACETE VINTAGE", d: "Tributo aos primeiros motociclistas e à tradição das duas rodas.", c: "#7a8c5c" },
-                  { t: "AS ASAS DA PÁTRIA", d: "Cores da Bandeira Nacional — o amor ao Brasil que nos move.", c: "#7a8c5c" },
-                  { t: "AS FAIXAS", d: "PATRIOTAS no topo, BRASIL na base — nosso nome e nossa origem.", c: "#c9973a" },
-                  { t: "LE MC", d: "LAW ENFORCMENT MOTO CLUBE.", c: "#7a8c5c" },
+                  { t: "AS ASAS DA PÁTRIA", d: "Cores da Bandeira Nacional — o amor ao Brasil que nos move.", c: "#fad608" },
+                  { t: "AS FAIXAS", d: "PATRIOTAS no topo, BRASIL na base — nosso nome e nossa origem.", c: "#7a8c5c" },
+                  { t: "LE MC", d: "LAW ENFORCMENT MOTO CLUBE.", c: "#fad608" },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 items-start">
                     <div className="w-0.5 mt-1 self-stretch" style={{ background: item.c, minHeight: 36, opacity: 0.6 }} />
                     <div>
-                      <div className="f-mad" style={{ fontSize: 16, color: item.c, letterSpacing: "0.06em" }}>{item.t}</div>
-                      <div className="f-body" style={{ fontSize: 12, color: "#6b6454", marginTop: 2 }}>{item.d}</div>
+                      <div className="f-mad" style={{ fontSize: 18, color: item.c, letterSpacing: "0.06em" }}>{item.t}</div>
+                      <div className="f-body" style={{ fontSize: 14, color: "#6b6454", marginTop: 2 }}>{item.d}</div>
                     </div>
                   </div>
                 ))}
@@ -643,7 +642,7 @@ export default function PatriotasSite() {
 
 
           </div>
-          <h3 className="f-mad mt-20 mb-10" style={{ fontSize: 40, color: "#f1ee09", letterSpacing: "0.04em" }}>
+          <h3 className="f-sans mt-20 mb-10" style={{ fontSize: 40, color: "#fad608", letterSpacing: "0.04em" }}>
             HISTORICO DE BRASÕES
           </h3>
 
@@ -682,7 +681,7 @@ export default function PatriotasSite() {
           {/* Nota de rodapé */}
           <div className="mt-10 flex items-center gap-4">
             <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(201,151,58,0.3), transparent)" }}/>
-            <span className="f-stencil" style={{ fontSize: 9, color: "#3a3028", letterSpacing: "0.3em" }}>
+            <span className="f-stencil" style={{ fontSize: 12, color: "#3a3028", letterSpacing: "0.3em" }}>
               MANAUS · AM · XVI · IV · MMXVI
             </span>
             <div className="h-px flex-1" style={{ background: "linear-gradient(to left, rgba(201,151,58,0.3), transparent)" }}/>
