@@ -420,7 +420,7 @@ export default function PatriotasSite() {
                   { n: "V", l: "PELOTÕES" },
                   { n: anosDeExistencia, l: "ANOS" },
                   { n: "XV", l: "FUNDADORES" },
-                  { n: "CII", l: "PATRIOTAS" },
+                  { n: "XCI", l: "PATRIOTAS MEMBROS" },
                 ].map((s, i) => (
                   <div key={i} className="leather-card patch px-6 py-4 min-w-[90px] text-center"
                     style={{ borderColor: "rgba(201,151,58,0.35)" }}>
