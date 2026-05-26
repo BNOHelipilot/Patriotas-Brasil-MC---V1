@@ -26,12 +26,22 @@ const BRASAO_INI = "/images/brasao_inicial.png";
 const BRASAO_MC = "/images/brasao_mc.png";
 const BRASAO_MG = "/images/brasao_mg.png";
 const BRASAO_MC_DF = "/images/brasao_mc_df.png";
+const MUSICA = "/music/musica_patriotas.mp3";
 
 export default function PatriotasSite() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [lightbox, setLightbox] = useState(null);
+  const [playing, setPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+  const toggleMusic = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (playing) { audio.pause(); setPlaying(false); }
+    else { audio.play(); setPlaying(true); }
+  };
 
   useEffect(() => {
     const s = document.createElement("style");
@@ -422,6 +432,23 @@ export default function PatriotasSite() {
           </div>
         </div>
 
+        {/* player de música */}
+        <audio ref={audioRef} src={MUSICA} loop />
+        <div className="mt-8 flex items-center gap-3">
+          <button onClick={toggleMusic}
+            className="flex items-center gap-3 px-5 py-2 leather-card patch transition-all"
+            style={{ borderColor: "rgba(201,151,58,0.45)", background: "rgba(14,13,11,0.85)" }}>
+            {playing ? (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fad608"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fad608"><polygon points="5,3 19,12 5,21"/></svg>
+            )}
+            <span className="f-stencil" style={{ fontSize: 11, letterSpacing: "0.3em", color: "#8a7a5c" }}>
+              {playing ? "PAUSAR MÚSICA" : "MÚSICA PATRIOTAS"}
+            </span>
+          </button>
+        </div>
+
         {/* Nota de rodapé */}
           <div className="mt-10 flex items-center gap-4">
             <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(201,151,58,0.3), transparent)" }}/>
@@ -777,7 +804,7 @@ export default function PatriotasSite() {
                 <div className="flex-1 leather-card patch p-5 mb-4"
                   style={{ borderColor: `${h.cor}40` }}>
                   <div className="flex items-center gap-3 mb-2 flex-wrap">
-                    <h3 className="f-mad" style={{ fontSize: 24, color: h.cor, letterSpacing: "0.06em" }}>{h.nivel}</h3>
+                    <h3 className="f-sans" style={{ fontSize: 24, color: h.cor, letterSpacing: "0.06em" }}>{h.nivel}</h3>
                     {h.camisa && (
                       <span className="f-stencil px-2 py-0.5"
                         style={{ fontSize: 12, letterSpacing: "0.3em", border: `1px solid ${h.cor}50`, color: h.cor }}>
