@@ -21,7 +21,7 @@ const F15 = "/images/fundador15.png";
 const FONT_URL = "/fonts/PointedlyMad.ttf";
 const FONT_SANCREEK = "/fonts/sancreek.regular.ttf";
 const ORGANO = "/images/organograma patriotas.png";
-const BRASAO_INICIAL = "/images/brasao_inicial.png";
+const BRASAO_NOVO = "/images/brasao_novo.png";
 const BRASAO_MC = "/images/brasao_mc.png";
 const BRASAO_MG = "/images/brasao_mg.png";
 const BRASAO_MC_DF = "/images/brasao_mc_df.png";
@@ -287,9 +287,9 @@ export default function PatriotasSite() {
         }}>
         <div className="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
           <button onClick={() => scrollTo("home")} className="flex items-center gap-3">
-            <div className="w-14 h-14 flex items-center justify-center overflow-hidden"
+            <div className="w-12 h-12 flex items-center justify-center overflow-hidden"
               style={{ background: "transparent" }}>
-              <img src={BRASAO} alt="Patriotas MC" style={{ width:"100%" }} />
+              <img src={BRASAO} alt="Patriotas MC" style={{ width:"200%" }} />
             </div>
             <div className="hidden sm:block">
               <div className="f-mad leading-none amber" style={{ fontSize: 28, letterSpacing: "0.05em" }}>PATRIOTAS</div>
@@ -706,7 +706,7 @@ export default function PatriotasSite() {
         <div className="absolute top-0 left-0 right-0 h-px"
           style={{ background: "linear-gradient(to right, transparent, rgba(201,151,58,0.3), transparent)" }} />
         <div className="max-w-6xl mx-auto">
-          <h2 className="f-sans amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em", color: "#fad608" }}>
+          <h2 className="f-sans amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
             DIREÇÃO NACIONAL
           </h2>
           <p className="f-body mb-16"
@@ -746,7 +746,7 @@ export default function PatriotasSite() {
       <section id="pelotoes" className="relative py-28 px-6"
         style={{ background: "linear-gradient(180deg,#0e0d0b,#0f0e0b,#0e0d0b)" }}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="f-sans amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em", color: "#fad608" }}>
+          <h2 className="f-sans amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
             NOSSOS PELOTÕES
           </h2>
           <p className="f-body mb-10" style={{ fontSize: 16, color: "#6b6454", maxWidth: 480, lineHeight: 1.8, whiteSpace: "nowrap" }}>
@@ -774,7 +774,7 @@ export default function PatriotasSite() {
         <div className="absolute top-0 left-0 right-0 h-px"
           style={{ background: "linear-gradient(to right, transparent, rgba(122,140,92,0.4), transparent)" }} />
         <div className="max-w-5xl mx-auto">
-          <h2 className="f-sans amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em", color: "#fad608" }}>
+          <h2 className="f-mad amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
             A JORNADA
           </h2>
           <p className="f-body mb-14" style={{ fontSize: 14, color: "#6b6454", maxWidth: 520, lineHeight: 1.8, whiteSpace: "nowrap" }}>
@@ -786,7 +786,7 @@ export default function PatriotasSite() {
               <div key={i} className="flex gap-5 items-stretch">
                 {/* número */}
                 <div className="flex-shrink-0 flex flex-col items-center gap-1">
-                  <div className="w-14 h-14 patch flex items-center justify-center f-sans"
+                  <div className="w-14 h-14 patch flex items-center justify-center f-mad"
                     style={{ fontSize: 24, borderColor: h.cor, color: h.cor, background: "rgba(14,13,11,0.9)" }}>
                     0{i + 1}
                   </div>
@@ -827,7 +827,7 @@ export default function PatriotasSite() {
       <section id="presidentes" className="relative py-28 px-6"
         style={{ background: "linear-gradient(180deg,#0e0d0b,#100f0c,#0e0d0b)" }}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="f-sans amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em", color: "#fad608" }}>
+          <h2 className="f-sans amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
             PRESIDENTES NACIONAIS
           </h2>
           <p className="f-body mb-14" style={{ fontSize: 16, color: "#6b6454", maxWidth: 520, lineHeight: 1.8, whiteSpace: "nowrap" }}>
@@ -881,7 +881,7 @@ export default function PatriotasSite() {
         <div className="absolute top-0 left-0 right-0 h-px"
           style={{ background: "linear-gradient(to right, transparent, rgba(201,151,58,0.3), transparent)" }} />
         <div className="max-w-6xl mx-auto">
-          <h2 className="f-sans amber mb-14" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em", color: "#fad608" }}>
+          <h2 className="f-sans amber mb-14" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em" }}>
             GALERIA DOS PATRIOTAS
           </h2>
 
@@ -934,9 +934,9 @@ export default function PatriotasSite() {
         style={{ background: "linear-gradient(180deg,#0e0d0b,#0d0c09)" }}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="f-mad amber mb-6"
-            style={{ fontSize: "clamp(36px,7vw,80px)", lineHeight: 1.1, letterSpacing: "0.04em", color: "#fad608" }}>
+            style={{ fontSize: "clamp(36px,7vw,80px)", lineHeight: 1.1, letterSpacing: "0.04em" }}>
             JUNTE-SE AOS<br />
-            <span style={{ color: "#fad608" }}>PATRIOTAS</span>
+            <span style={{ color: "#e8e0cc" }}>PATRIOTAS</span>
           </h2>
 
           <p className="f-body mb-14 mx-auto"
