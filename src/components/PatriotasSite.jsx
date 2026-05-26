@@ -300,7 +300,7 @@ export default function PatriotasSite() {
           backdropFilter: scrolled ? "blur(12px)" : "none",
           borderColor: "rgba(201,151,58,0.2)",
         }}>
-        <div className="max-w-7xl mx-auto pl-2 pr-5 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-2 pr-5 py-4 flex items-center justify-between">
           <button onClick={() => scrollTo("home")} className="flex items-center gap-3">
             <div className="w-14 h-14 flex items-center justify-center overflow-hidden"
               style={{ background: "transparent" }}>
@@ -350,7 +350,7 @@ export default function PatriotasSite() {
       </nav>
 
       {/* ════════════════ HERO ════════════════ */}
-      <section id="home" className="leather-bg relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+      <section id="home" className="leather-bg relative min-h-screen flex flex-col items-center justify-center overflow-hidden" style={{ paddingTop: 80 }}>
         {/* radial glow verde oliva */}
         <div className="absolute inset-0 pointer-events-none"
           style={{ background: "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(74,92,64,0.12) 0%, transparent 70%)" }} />
