@@ -288,11 +288,11 @@ export default function PatriotasSite() {
           <button onClick={() => scrollTo("home")} className="flex items-center gap-3">
             <div className="w-12 h-12 flex items-center justify-center overflow-hidden"
               style={{ background: "transparent" }}>
-              <img src={BRASAO} alt="Patriotas MC" style={{ width:"200%", objectFit:"contain" }} />
+              <img src={BRASAO} alt="Patriotas MC" style={{ width:"20%" }} />
             </div>
             <div className="hidden sm:block">
               <div className="f-mad leading-none amber" style={{ fontSize: 28, letterSpacing: "0.05em" }}>PATRIOTAS</div>
-              <div className="f-mad leading-none amber" style={{ fontSize: 14, letterSpacing: "0.4em" }}>BRASIL</div>
+              <div className="f-mad leading-none amber" style={{ fontSize: 18, letterSpacing: "0.4em" }}>BRASIL</div>
               <div className="f-mad leading-none amber" style={{ fontSize: 14, letterSpacing: "0.4em" }}>LE · MC</div>
             </div>
           </button>
