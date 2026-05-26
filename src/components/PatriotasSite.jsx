@@ -288,7 +288,7 @@ export default function PatriotasSite() {
           <button onClick={() => scrollTo("home")} className="flex items-center gap-3">
             <div className="w-12 h-12 flex items-center justify-center overflow-hidden"
               style={{ background: "transparent" }}>
-              <img src={BRASAO} alt="Patriotas MC" style={{ width:"20%" }} />
+              <img src={BRASAO} alt="Patriotas MC" style={{ width:"80%" }} />
             </div>
             <div className="hidden sm:block">
               <div className="f-mad leading-none amber" style={{ fontSize: 28, letterSpacing: "0.05em" }}>PATRIOTAS</div>
