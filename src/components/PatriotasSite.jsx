@@ -682,7 +682,7 @@ export default function PatriotasSite() {
 
           <div className="grid md:grid-cols-4 gap-14 items-start">
             {[
-              { src: BRASAO_INI, alt: "Brasão Inicial", label: "Primeiro protótipo do PATRIOTAS MOTO GRUPO." },
+              { src: BRASAO_INI, alt: "Brasão Inicial", label: "Primeiro protótipo do brasão do PATRIOTAS MOTO GRUPO." },
               { src: BRASAO_MG,  alt: "Brasão Moto Grupo", label: "Brasão do PATRIOTAS MOTO GRUPO." },
               { src: BRASAO_MC,  alt: "Brasão Moto Clube", label: "Brasão do PATRIOTAS MOTO CLUBE." },
               { src: BRASAO_MC_DF, alt: "Brasão MC DF", label: "Brasão do PATRIOTAS MOTO CLUBE no estado." },
@@ -848,9 +848,9 @@ export default function PatriotasSite() {
               <div key={i} className="leather-card patch overflow-hidden"
                 style={{ borderColor: "rgba(201,151,58,0.3)" }}>
                 {/* foto */}
-                <div style={{ height: 320, overflow: "hidden", position: "relative" }}>
+                <div style={{ height: 320, overflow: "hidden", position: "relative", background: "#0e0d0b", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <img src={p.foto} alt={p.nome}
-                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top",
+                    style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain",
                       filter: "grayscale(20%) contrast(1.05)" }} />
                   {i === presidentes.length - 1 && (
                     <div className="absolute top-3 right-3 f-stencil px-2 py-1"
