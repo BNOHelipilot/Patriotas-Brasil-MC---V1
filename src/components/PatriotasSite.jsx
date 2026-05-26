@@ -21,6 +21,7 @@ const F15 = "/images/fundador15.png";
 const FONT_URL = "/fonts/PointedlyMad.ttf";
 const FONT_SANCREEK = "/fonts/sancreek.regular.ttf";
 const ORGANO = "/images/organograma patriotas.png";
+const BRASAO_NOVO = "/images/brasao_novo.png";
 const BRASAO_MC = "/images/brasao_mc.png";
 const BRASAO_MG = "/images/brasao_mg.png";
 const BRASAO_MC_DF = "/images/brasao_mc_df.png";
@@ -288,7 +289,7 @@ export default function PatriotasSite() {
           <button onClick={() => scrollTo("home")} className="flex items-center gap-3">
             <div className="w-12 h-12 flex items-center justify-center overflow-hidden"
               style={{ background: "transparent" }}>
-              <img src={BRASAO} alt="Patriotas MC" style={{ width:"80%" }} />
+              <img src={BRASAO} alt="Patriotas MC" style={{ width:"200%" }} />
             </div>
             <div className="hidden sm:block">
               <div className="f-mad leading-none amber" style={{ fontSize: 28, letterSpacing: "0.05em" }}>PATRIOTAS</div>
@@ -647,7 +648,17 @@ export default function PatriotasSite() {
             HISTORICO DE BRASÕES
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-14 items-start">
+          <div className="grid md:grid-cols-4 gap-14 items-start">
+            {/* placeholder brasão MG */}
+            <div className="flex flex-col items-center">
+              <img src={BRASAO_NOVO} alt="Brasão Patriotas Brasil MG"
+                style={{ width:"100%",
+                  filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
+              <p className="f-body mt-4 text-center" style={{ fontSize: 16, color: "#8a7a5c", lineHeight: 1.8 }}>
+                Primeiro protótipo do Moto Grupo.
+              </p>
+            </div>
+            
             {/* placeholder brasão MG */}
             <div className="flex flex-col items-center">
               <img src={BRASAO_MG} alt="Brasão Patriotas Brasil MG"
