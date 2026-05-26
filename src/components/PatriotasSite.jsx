@@ -646,50 +646,27 @@ export default function PatriotasSite() {
 
           </div>
           <h3 className="f-sans mt-20 mb-10" style={{ fontSize: 40, color: "#fad608", letterSpacing: "0.04em" }}>
-            HISTORICO DE BRASÕES
+            HISTÓRICO DE BRASÕES
           </h3>
 
           <div className="grid md:grid-cols-4 gap-14 items-start">
-            {/* placeholder brasão MG */}
-            <div className="flex flex-col items-center">
-              <img src={BRASAO_INI} alt="Brasão Inicial Patriotas Brasil MG"
-                style={{ width:"100%",
-                  filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
-              <p className="f-body mt-4 text-center" style={{ fontSize: 16, color: "#8a7a5c", lineHeight: 1.8 }}>
-                Primeiro protótipo do Moto Grupo.
-              </p>
-            </div>
-            
-            {/* placeholder brasão MG */}
-            <div className="flex flex-col items-center">
-              <img src={BRASAO_MG} alt="Brasão Patriotas Brasil MG"
-                style={{ width:"100%",
-                  filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
-              <p className="f-body mt-4 text-center" style={{ fontSize: 16, color: "#8a7a5c", lineHeight: 1.8 }}>
-                Brasão do PATRIOTAS MOTO GRUPO.
-              </p>
-            </div>
-          
-            {/* placeholder brasão MC */}
-            <div className="flex flex-col items-center" >
-              <img src={BRASAO_MC} alt="Brasão Patriotas Brasil MC"
-                style={{ width:"100%",
-                  filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
-              <p className="f-body mt-4 text-center" style={{ fontSize: 16, color: "#8a7a5c", lineHeight: 1.8 }}>
-                Brasão do PATRIOTAS MOTO CLUBE.
-              </p>
-            </div>
-
-            {/* placeholder brasão MC DF */}
-            <div className="flex flex-col items-center" >
-              <img src={BRASAO_MC_DF} alt="Brasão Patriotas Brasil MC DF"
-                style={{ width:"100%",
-                  filter:"drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
-              <p className="f-body mt-4 text-center" style={{ fontSize: 16, color: "#8a7a5c", lineHeight: 1.8 }}>
-                Brasão do PATRIOTAS MOTO CLUBE no estado.
-              </p>
-            </div>
-
+            {[
+              { src: BRASAO_INI, alt: "Brasão Inicial", label: "Primeiro protótipo do Moto Grupo." },
+              { src: BRASAO_MG,  alt: "Brasão Moto Grupo", label: "Brasão do PATRIOTAS MOTO GRUPO." },
+              { src: BRASAO_MC,  alt: "Brasão Moto Clube", label: "Brasão do PATRIOTAS MOTO CLUBE." },
+              { src: BRASAO_MC_DF, alt: "Brasão MC DF", label: "Brasão do PATRIOTAS MOTO CLUBE no estado." },
+            ].map((b, i) => (
+              <div key={i} className="flex flex-col items-center">
+                <div style={{ height: 280, display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
+                  <img src={b.src} alt={b.alt}
+                    style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain",
+                      filter: "drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
+                </div>
+                <p className="f-body mt-4 text-center" style={{ fontSize: 16, color: "#8a7a5c", lineHeight: 1.8 }}>
+                  {b.label}
+                </p>
+              </div>
+            ))}
           </div>
           {/* Nota de rodapé */}
           <div className="mt-10 flex items-center gap-4">
