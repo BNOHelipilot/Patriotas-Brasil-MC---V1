@@ -300,7 +300,7 @@ export default function PatriotasSite() {
           backdropFilter: scrolled ? "blur(12px)" : "none",
           borderColor: "rgba(201,151,58,0.2)",
         }}>
-        <div className="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto pl-2 pr-5 py-4 flex items-center justify-between">
           <button onClick={() => scrollTo("home")} className="flex items-center gap-3">
             <div className="w-14 h-14 flex items-center justify-center overflow-hidden"
               style={{ background: "transparent" }}>
@@ -487,15 +487,15 @@ export default function PatriotasSite() {
               {
                 data: "05 · ABR · 2021",
                 titulo: "A FUNDAÇÃO - MOTO CLUBE",
-                texto: `O Patriotas Brasil Moto Clube nasce oficialmente com 15 motociclistas. A data em que pela primeira vez vestimos nossas camisetas pretas e fomos reconhecidos como Moto Clube pela sociedade manauara. Em maio, recebemos as camisas cinza de botão na sede do nosso padrinho: o Moto Clube Open Road.`,
+                texto: `O Patriotas Brasil Moto Clube nasce oficialmente com 15 motociclistas. A data em que pela primeira vez vestimos nossas camisetas pretas e fomos reconhecidos como Moto Clube pela sociedade manauara. Em maio, recebemos as camisas cinza de botão na sede do nosso padrinho: o MOTO CLUBE OPEN ROAD.`,
               },
               {
-                data: "xx · xxx · xxxx",
-                titulo: "CRIAÇÃO DOS PELOTÕES - MOTO CLUBE AM",
-                texto: `O Patriotas Brasil Moto Clube com seus irmãos sendo transferidos tem inicio aos demais pelotões, iniciando por Brasília, passando pelo Rio de Janeiro, Campo Grande e São Paulo.`,
+                data: "25 · JUL · 2020",
+                titulo: "CRIAÇÃO DOS PELOTÕES - MOTO CLUBE AM · DF · RJ · MS · SP",
+                texto: `O Patriotas Brasil Moto Clube com seus irmãos sendo transferidos tem inicio aos demais pelotões, iniciando por Brasília, passando pelo Rio de Janeiro, Campo Grande e Taubaté.`,
               },
               {
-                data: "xx · xxx · xxxx",
+                data: "xx · xxx · 2025",
                 titulo: "LEMC - LAW ENFORCMENT MOTO CLUBE",
                 texto: `O Patriotas Brasil Moto Clube passa a ser considerado LE bla bla bla .......`,
               },
@@ -682,7 +682,7 @@ export default function PatriotasSite() {
 
           <div className="grid md:grid-cols-4 gap-14 items-start">
             {[
-              { src: BRASAO_INI, alt: "Brasão Inicial", label: "Primeiro protótipo do brasão do PATRIOTAS MOTO GRUPO." },
+              { src: BRASAO_INI, alt: "Brasão Inicial", label: "Protótipo do brasão do PATRIOTAS MOTO GRUPO." },
               { src: BRASAO_MG,  alt: "Brasão Moto Grupo", label: "Brasão do PATRIOTAS MOTO GRUPO." },
               { src: BRASAO_MC,  alt: "Brasão Moto Clube", label: "Brasão do PATRIOTAS MOTO CLUBE." },
               { src: BRASAO_MC_DF, alt: "Brasão MC DF", label: "Brasão do PATRIOTAS MOTO CLUBE no estado." },
