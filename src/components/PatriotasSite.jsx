@@ -682,7 +682,7 @@ export default function PatriotasSite() {
 
           <div className="grid md:grid-cols-4 gap-14 items-start">
             {[
-              { src: BRASAO_INI, alt: "Brasão Inicial", label: "Primeiro protótipo do Moto Grupo." },
+              { src: BRASAO_INI, alt: "Brasão Inicial", label: "Primeiro protótipo do PATRIOTAS MOTO GRUPO." },
               { src: BRASAO_MG,  alt: "Brasão Moto Grupo", label: "Brasão do PATRIOTAS MOTO GRUPO." },
               { src: BRASAO_MC,  alt: "Brasão Moto Clube", label: "Brasão do PATRIOTAS MOTO CLUBE." },
               { src: BRASAO_MC_DF, alt: "Brasão MC DF", label: "Brasão do PATRIOTAS MOTO CLUBE no estado." },
