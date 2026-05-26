@@ -130,9 +130,9 @@ export default function PatriotasSite() {
   ];
 
   const presidentes = [
-    { nome: "MORAES", periodo: "2021 – 2023", local: "Manaus · AM", foto: P01 },
-    { nome: "PEREIRA SOUZA", periodo: "2023 – 2025", local: "Manaus · AM", foto: P02 },
-    { nome: "BRAGA", periodo: "2025 – 2026", local: "Manaus · AM", foto: P03 },
+    { nome: "MORAES", periodo: "2016 – 2020", local: "Manaus · AM", foto: P01 },
+    { nome: "PEREIRA SOUZA", periodo: "2020 – 2024", local: "Manaus · AM", foto: P02 },
+    { nome: "BRAGA", periodo: "2024 – 2026", local: "Manaus · AM", foto: P03 },
     { nome: "FABINHO", periodo: "2026 – atual", local: "Manaus · AM", foto: P04 },
   ];
 
@@ -861,16 +861,16 @@ export default function PatriotasSite() {
                 </div>
                 {/* info */}
                 <div className="text-center px-4 py-5">
-                  <div className="f-stencil amber mb-1" style={{ fontSize: 9, letterSpacing: "0.35em" }}>
+                  <div className="f-stencil amber mb-1" style={{ fontSize: 11, letterSpacing: "0.35em" }}>
                     {i === presidentes.length - 1 ? "PRESIDENTE NACIONAL" : `GESTÃO ${i + 1}`}
                   </div>
                   <div className="f-mad mb-1" style={{ fontSize: 18, color: "#e8e0cc", letterSpacing: "0.05em" }}>
                     {p.nome}
                   </div>
-                  <div className="f-stencil" style={{ fontSize: 10, color: "#6b6454", letterSpacing: "0.25em" }}>
+                  <div className="f-stencil" style={{ fontSize: 12, color: "#6b6454", letterSpacing: "0.25em" }}>
                     {p.periodo}
                   </div>
-                  <div className="f-stencil mt-1" style={{ fontSize: 9, color: "#4a4035", letterSpacing: "0.2em" }}>
+                  <div className="f-stencil mt-1" style={{ fontSize: 11, color: "#4a4035", letterSpacing: "0.2em" }}>
                     {p.local}
                   </div>
                 </div>
