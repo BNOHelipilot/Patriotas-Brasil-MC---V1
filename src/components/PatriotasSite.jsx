@@ -27,6 +27,10 @@ const BRASAO_MC = "/images/brasao_mc.png";
 const BRASAO_MG = "/images/brasao_mg.png";
 const BRASAO_MC_DF = "/images/brasao_mc_df.png";
 const MUSICA = "/music/musica_patriotas.mp3";
+const P01 = "/images/presidente_01.png";
+const P02 = "/images/Presidente_02.png";
+const P03 = "/images/Presidente_03.png";
+const P04 = "/images/presidente_04.png";
 
 export default function PatriotasSite() {
   const [scrolled, setScrolled] = useState(false);
@@ -126,10 +130,10 @@ export default function PatriotasSite() {
   ];
 
   const presidentes = [
-    { nome: "MORAES", periodo: "2021 – 2023", local: "Manaus · AM" },
-    { nome: "PEREIRA SOUZA", periodo: "2023 – 2025", local: "Manaus · AM" },
-    { nome: "BRAGA", periodo: "2025 – 2026", local: "Manaus · AM" },
-    { nome: "FABINHO", periodo: "2026 – atual", local: "Manaus · AM" },
+    { nome: "MORAES", periodo: "2021 – 2023", local: "Manaus · AM", foto: P01 },
+    { nome: "PEREIRA SOUZA", periodo: "2023 – 2025", local: "Manaus · AM", foto: P02 },
+    { nome: "BRAGA", periodo: "2025 – 2026", local: "Manaus · AM", foto: P03 },
+    { nome: "FABINHO", periodo: "2026 – atual", local: "Manaus · AM", foto: P04 },
   ];
 
   const galeria = Array(9).fill(null).map((_, i) => ({
@@ -839,31 +843,36 @@ export default function PatriotasSite() {
             Os líderes que carregaram o colete e conduziram a irmandade. Cada mandato, uma página na história dos Patriotas.
           </p>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {presidentes.map((p, i) => (
-              <div key={i} className="leather-card patch text-center py-8 px-6"
+              <div key={i} className="leather-card patch overflow-hidden"
                 style={{ borderColor: "rgba(201,151,58,0.3)" }}>
-                {/* foto placeholder */}
-                <div className="w-24 h-24 mx-auto mb-5 rounded-full patch flex items-center justify-center"
-                  style={{ borderColor: "rgba(201,151,58,0.4)", background: "rgba(201,151,58,0.05)" }}>
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    strokeWidth="1" style={{ color: "#4a4035" }}>
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                    <circle cx="12" cy="7" r="4" />
-                  </svg>
+                {/* foto */}
+                <div style={{ height: 320, overflow: "hidden", position: "relative" }}>
+                  <img src={p.foto} alt={p.nome}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top",
+                      filter: "grayscale(20%) contrast(1.05)" }} />
+                  {i === presidentes.length - 1 && (
+                    <div className="absolute top-3 right-3 f-stencil px-2 py-1"
+                      style={{ fontSize: 9, letterSpacing: "0.3em", background: "#fad608", color: "#0e0d0b" }}>
+                      ATUAL
+                    </div>
+                  )}
                 </div>
-
-                <div className="f-stencil amber mb-1" style={{ fontSize: 9, letterSpacing: "0.35em" }}>
-                  {i === presidentes.length - 1 ? "ATUAL" : `GESTÃO ${i + 1}`}
-                </div>
-                <div className="f-mad mb-2" style={{ fontSize: 18, color: "#e8e0cc", letterSpacing: "0.05em" }}>
-                  {p.nome}
-                </div>
-                <div className="f-stencil" style={{ fontSize: 10, color: "#6b6454", letterSpacing: "0.25em" }}>
-                  {p.periodo}
-                </div>
-                <div className="f-stencil mt-1" style={{ fontSize: 9, color: "#4a4035", letterSpacing: "0.2em" }}>
-                  {p.local}
+                {/* info */}
+                <div className="text-center px-4 py-5">
+                  <div className="f-stencil amber mb-1" style={{ fontSize: 9, letterSpacing: "0.35em" }}>
+                    {i === presidentes.length - 1 ? "PRESIDENTE NACIONAL" : `GESTÃO ${i + 1}`}
+                  </div>
+                  <div className="f-mad mb-1" style={{ fontSize: 18, color: "#e8e0cc", letterSpacing: "0.05em" }}>
+                    {p.nome}
+                  </div>
+                  <div className="f-stencil" style={{ fontSize: 10, color: "#6b6454", letterSpacing: "0.25em" }}>
+                    {p.periodo}
+                  </div>
+                  <div className="f-stencil mt-1" style={{ fontSize: 9, color: "#4a4035", letterSpacing: "0.2em" }}>
+                    {p.local}
+                  </div>
                 </div>
               </div>
             ))}
