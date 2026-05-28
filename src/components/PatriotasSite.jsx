@@ -765,23 +765,19 @@ export default function PatriotasSite() {
                 <div className="f-body" style={{ fontSize: 11, color: "#6b6454", marginTop: 4, maxWidth: 260 }}>{diretoria[0].desc}</div>
               </div>
 
-              {/* linha + VICE-PRESIDENTE */}
-              <div style={{ display: "flex", alignItems: "flex-start" }}>
-                <div style={{ width: 1, height: 62, background: "rgba(201,151,58,0.4)" }} />
-                <div style={{ display: "flex", alignItems: "center", marginTop: 24 }}>
-                  <div style={{ width: 220, height: 1, background: "rgba(201,151,58,0.4)" }} />
-                  <div style={{ border: "1.5px solid rgba(201,151,58,0.55)", borderRadius: 8, padding: "10px 34px", background: "rgba(14,13,11,0.95)", textAlign: "center" }}>
-                    <div className="f-sans" style={{ fontSize: 14, color: "#fad608", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>{diretoria[1].cargo}</div>
-                    <div className="f-body" style={{ fontSize: 11, color: "#6b6454", marginTop: 4, maxWidth: 260 }}>{diretoria[1].desc}</div>
-                  </div>
+              {/* linha vertical + VICE-PRESIDENTE: linha horizontal parte do centro */}
+              <div style={{ width: 1, height: 32, background: "rgba(201,151,58,0.4)" }} />
+              <div style={{ width: "100%", display: "flex", alignItems: "center", boxSizing: "border-box", paddingLeft: "50%" }}>
+                <div style={{ width: 200, height: 1, background: "rgba(201,151,58,0.4)", flexShrink: 0 }} />
+                <div style={{ border: "1.5px solid rgba(201,151,58,0.55)", borderRadius: 8, padding: "10px 24px", background: "rgba(14,13,11,0.95)", textAlign: "center", flexShrink: 0 }}>
+                  <div className="f-sans" style={{ fontSize: 14, color: "#fad608", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>{diretoria[1].cargo}</div>
+                  <div className="f-body" style={{ fontSize: 11, color: "#6b6454", marginTop: 4, maxWidth: 260 }}>{diretoria[1].desc}</div>
                 </div>
               </div>
+              <div style={{ width: 1, height: 32, background: "rgba(201,151,58,0.4)" }} />
 
-              {/* linha vertical */}
-              <div style={{ width: 1, height: 36, background: "rgba(201,151,58,0.4)" }} />
-
-              {/* 4 cargos inferiores */}
-              <div style={{ position: "relative", width: "100%", paddingTop: 36 }}>
+              {/* 4 cargos inferiores: barra horizontal no topo, linhas verticais a tocam */}
+              <div style={{ position: "relative", width: "100%" }}>
                 <div style={{ position: "absolute", top: 0, left: "12.5%", right: "12.5%", height: 1, background: "rgba(201,151,58,0.4)" }} />
                 <div style={{ display: "flex", gap: 12 }}>
                   {diretoria.slice(2).map((d, i) => (
