@@ -755,22 +755,48 @@ export default function PatriotasSite() {
             Cada função da Diretoria tem responsabilidades claras definidas pelo Estatuto, garantindo disciplina, organização e o cumprimento dos valores do clube.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {diretoria.map((d, i) => (
-              <div key={i} className="leather-card patch p-6 relative overflow-hidden"
-                style={{ borderColor: i % 2 === 0 ? "rgba(201,151,58,0.3)" : "rgba(122,140,92,0.3)" }}>
-                {/* número grande de fundo */}
-                <div className="absolute top-2 right-3 f-mad"
-                  style={{ fontSize: 80, color: "rgba(201,151,58,0.04)", lineHeight: 1 }}>
-                  0{i + 1}
-                </div>
-                <div className="relative z-10">
+          {/* ── ORGANOGRAMA ── */}
+          <div style={{ overflowX: "auto", paddingBottom: 8 }}>
+            <div style={{ minWidth: 620, display: "flex", flexDirection: "column", alignItems: "center" }}>
 
-                  <h3 className="f-sans mb-3" style={{ fontSize: 20, color: "#e8e0cc", letterSpacing: "0.06em" }}>{d.cargo}</h3>
-                  <p className="f-body" style={{ fontSize: 14, color: "#6b6454", lineHeight: 1.7 }}>{d.desc}</p>
+              {/* PRESIDENTE */}
+              <div style={{ border: "1.5px solid rgba(201,151,58,0.7)", borderRadius: 8, padding: "12px 40px", background: "rgba(14,13,11,0.95)", textAlign: "center" }}>
+                <div className="f-sans" style={{ fontSize: 16, color: "#fad608", letterSpacing: "0.1em" }}>{diretoria[0].cargo}</div>
+                <div className="f-body" style={{ fontSize: 11, color: "#6b6454", marginTop: 4, maxWidth: 260 }}>{diretoria[0].desc}</div>
+              </div>
+
+              {/* linha + VICE-PRESIDENTE */}
+              <div style={{ display: "flex", alignItems: "flex-start" }}>
+                <div style={{ width: 1, height: 48, background: "rgba(201,151,58,0.4)" }} />
+                <div style={{ display: "flex", alignItems: "center", marginTop: 24 }}>
+                  <div style={{ width: 100, height: 1, background: "rgba(201,151,58,0.4)" }} />
+                  <div style={{ border: "1.5px solid rgba(201,151,58,0.55)", borderRadius: 8, padding: "10px 24px", background: "rgba(14,13,11,0.95)", textAlign: "center" }}>
+                    <div className="f-sans" style={{ fontSize: 14, color: "#fad608", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>{diretoria[1].cargo}</div>
+                    <div className="f-body" style={{ fontSize: 11, color: "#6b6454", marginTop: 4, maxWidth: 260 }}>{diretoria[1].desc}</div>
+                  </div>
                 </div>
               </div>
-            ))}
+
+              {/* linha vertical */}
+              <div style={{ width: 1, height: 36, background: "rgba(201,151,58,0.4)" }} />
+
+              {/* 4 cargos inferiores */}
+              <div style={{ position: "relative", width: "100%", paddingTop: 36 }}>
+                <div style={{ position: "absolute", top: 0, left: "12.5%", right: "12.5%", height: 1, background: "rgba(201,151,58,0.4)" }} />
+                <div style={{ display: "flex", gap: 12 }}>
+                  {diretoria.slice(2).map((d, i) => (
+                    <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
+                      <div style={{ width: 1, height: 36, background: "rgba(201,151,58,0.4)" }} />
+                      <div style={{ border: "1.5px solid rgba(201,151,58,0.35)", borderRadius: 8, padding: "10px 10px", background: "rgba(14,13,11,0.95)", textAlign: "center", width: "100%" }}>
+                        <div className="f-sans" style={{ fontSize: 12, color: "#e8e0cc", letterSpacing: "0.07em" }}>{d.cargo}</div>
+                        <div className="f-body" style={{ fontSize: 11, color: "#6b6454", marginTop: 5, lineHeight: 1.5 }}>{d.desc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
           </div>
           {/* Nota de rodapé */}
           <div className="mt-10 flex items-center gap-4">
