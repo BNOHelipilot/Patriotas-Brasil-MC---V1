@@ -398,7 +398,10 @@ export default function PatriotasSite() {
                 style={{ fontFamily: "'PointedlyMad', 'Rye', serif", fontSize: "clamp(14px,2.5vw,32px)", color: "#fad608", letterSpacing: "0.1em" }}>
                 LE &nbsp;·&nbsp; MC
               </p>
-
+              <p className="f-mad leading-none mb-5"
+                style={{ fontFamily: "'PointedlyMad', 'Rye', serif", fontSize: "clamp(14px,2.5vw,32px)", color: "#fad608", letterSpacing: "0.1em" }}>
+                LAWENFORCMENT &nbsp;·&nbsp; MOTO CLUBE
+              </p>
               <div className="divider mb-5" style={{ maxWidth: 400, marginLeft: "auto", marginRight: "auto" }} />
 
 
@@ -460,7 +463,7 @@ export default function PatriotasSite() {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="#fad608"><polygon points="5,3 19,12 5,21"/></svg>
               )}
               <span className="f-stencil" style={{ fontSize: 11, letterSpacing: "0.3em", color: "#8a7a5c" }}>
-                {playing ? "PAUSAR" : "MÚSICA I"}
+                {playing ? "PAUSAR" : "MÚSICA 1ª VERSÃO"}
               </span>
             </button>
             <button onClick={toggleMusic2}
@@ -472,12 +475,12 @@ export default function PatriotasSite() {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="#fad608"><polygon points="5,3 19,12 5,21"/></svg>
               )}
               <span className="f-stencil" style={{ fontSize: 11, letterSpacing: "0.3em", color: "#8a7a5c" }}>
-                {playing2 ? "PAUSAR" : "MÚSICA II"}
+                {playing2 ? "PAUSAR" : "MÚSICA NOVA VERSÃO"}
               </span>
             </button>
           </div>
           <div className="f-stencil" style={{ fontSize: 9, color: "#4a4035", letterSpacing: "0.2em" }}>
-            CRÉDITOS · LEANDRO DE FREITAS · PATRIOTA 28
+            LETRA  E MÚSICA · LEANDRO FREITAS · PATRIOTA 28
           </div>
         </div>
 
@@ -708,15 +711,15 @@ export default function PatriotasSite() {
             HISTÓRICO DE BRASÕES
           </h3>
 
-          <div className="grid md:grid-cols-4 gap-14 items-start">
+          <div className="flex flex-col items-center gap-16 max-w-lg mx-auto">
             {[
               { src: BRASAO_INI, alt: "Brasão Inicial", label: "Protótipo do brasão do PATRIOTAS MOTO GRUPO." },
               { src: BRASAO_MG,  alt: "Brasão Moto Grupo", label: "Brasão do PATRIOTAS MOTO GRUPO." },
               { src: BRASAO_MC,  alt: "Brasão Moto Clube", label: "Brasão do PATRIOTAS MOTO CLUBE." },
               { src: BRASAO_MC_DF, alt: "Brasão MC DF", label: "Brasão do PATRIOTAS MOTO CLUBE no estado." },
             ].map((b, i) => (
-              <div key={i} className="flex flex-col items-center">
-                <div style={{ height: 280, display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
+              <div key={i} className="flex flex-col items-center w-full">
+                <div style={{ height: 320, display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
                   <img src={b.src} alt={b.alt}
                     style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain",
                       filter: "drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
@@ -724,6 +727,7 @@ export default function PatriotasSite() {
                 <p className="f-body mt-4 text-center" style={{ fontSize: 16, color: "#8a7a5c", lineHeight: 1.8 }}>
                   {b.label}
                 </p>
+                {i < 3 && <div className="mt-10 w-px h-10" style={{ background: "linear-gradient(to bottom, rgba(201,151,58,0.4), transparent)" }} />}
               </div>
             ))}
           </div>
