@@ -27,6 +27,7 @@ const BRASAO_MC = "/images/brasao_mc.png";
 const BRASAO_MG = "/images/brasao_mg.png";
 const BRASAO_MC_DF = "/images/brasao_mc_df.png";
 const MUSICA = "/music/musica_patriotas.mp3";
+const MUSICA2 = "/music/musica_patriotas_nova.mpeg";
 const P01 = "/images/presidente_01.png";
 const P02 = "/images/Presidente_02.png";
 const P03 = "/images/Presidente_03.png";
@@ -38,13 +39,22 @@ export default function PatriotasSite() {
   const [activeSection, setActiveSection] = useState("home");
   const [lightbox, setLightbox] = useState(null);
   const [playing, setPlaying] = useState(false);
+  const [playing2, setPlaying2] = useState(false);
   const audioRef = useRef(null);
+  const audioRef2 = useRef(null);
 
   const toggleMusic = () => {
     const audio = audioRef.current;
     if (!audio) return;
     if (playing) { audio.pause(); setPlaying(false); }
-    else { audio.play(); setPlaying(true); }
+    else { audioRef2.current?.pause(); setPlaying2(false); audio.play(); setPlaying(true); }
+  };
+
+  const toggleMusic2 = () => {
+    const audio = audioRef2.current;
+    if (!audio) return;
+    if (playing2) { audio.pause(); setPlaying2(false); }
+    else { audioRef.current?.pause(); setPlaying(false); audio.play(); setPlaying2(true); }
   };
 
   useEffect(() => {
@@ -300,7 +310,7 @@ export default function PatriotasSite() {
           backdropFilter: scrolled ? "blur(12px)" : "none",
           borderColor: "rgba(201,151,58,0.2)",
         }}>
-        <div className="max-w-7xl mx-auto px-2 pr-5 py-4 flex items-center justify-between">
+        <div className="w-full pl-1 pr-5 py-4 flex items-center justify-between">
           <button onClick={() => scrollTo("home")} className="flex items-center gap-3">
             <div className="w-14 h-14 flex items-center justify-center overflow-hidden"
               style={{ background: "transparent" }}>
@@ -438,19 +448,37 @@ export default function PatriotasSite() {
 
         {/* player de música */}
         <audio ref={audioRef} src={MUSICA} loop />
-        <div className="mt-8 flex items-center gap-3">
-          <button onClick={toggleMusic}
-            className="flex items-center gap-3 px-5 py-2 leather-card patch transition-all"
-            style={{ borderColor: "rgba(201,151,58,0.45)", background: "rgba(14,13,11,0.85)" }}>
-            {playing ? (
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fad608"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>
-            ) : (
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fad608"><polygon points="5,3 19,12 5,21"/></svg>
-            )}
-            <span className="f-stencil" style={{ fontSize: 11, letterSpacing: "0.3em", color: "#8a7a5c" }}>
-              {playing ? "PAUSAR MÚSICA" : "MÚSICA PATRIOTAS"}
-            </span>
-          </button>
+        <audio ref={audioRef2} src={MUSICA2} loop />
+        <div className="mt-8 flex flex-col items-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
+            <button onClick={toggleMusic}
+              className="flex items-center gap-3 px-5 py-2 leather-card patch transition-all"
+              style={{ borderColor: playing ? "rgba(201,151,58,0.8)" : "rgba(201,151,58,0.45)", background: "rgba(14,13,11,0.85)" }}>
+              {playing ? (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#fad608"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>
+              ) : (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#fad608"><polygon points="5,3 19,12 5,21"/></svg>
+              )}
+              <span className="f-stencil" style={{ fontSize: 11, letterSpacing: "0.3em", color: "#8a7a5c" }}>
+                {playing ? "PAUSAR" : "MÚSICA I"}
+              </span>
+            </button>
+            <button onClick={toggleMusic2}
+              className="flex items-center gap-3 px-5 py-2 leather-card patch transition-all"
+              style={{ borderColor: playing2 ? "rgba(201,151,58,0.8)" : "rgba(201,151,58,0.45)", background: "rgba(14,13,11,0.85)" }}>
+              {playing2 ? (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#fad608"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>
+              ) : (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#fad608"><polygon points="5,3 19,12 5,21"/></svg>
+              )}
+              <span className="f-stencil" style={{ fontSize: 11, letterSpacing: "0.3em", color: "#8a7a5c" }}>
+                {playing2 ? "PAUSAR" : "MÚSICA II"}
+              </span>
+            </button>
+          </div>
+          <div className="f-stencil" style={{ fontSize: 9, color: "#4a4035", letterSpacing: "0.2em" }}>
+            CRÉDITOS · LEANDRO DE FREITAS · PATRIOTA 28
+          </div>
         </div>
 
         {/* Nota de rodapé */}
