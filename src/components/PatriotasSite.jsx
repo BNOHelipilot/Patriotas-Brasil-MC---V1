@@ -767,10 +767,10 @@ export default function PatriotasSite() {
 
               {/* linha + VICE-PRESIDENTE */}
               <div style={{ display: "flex", alignItems: "flex-start" }}>
-                <div style={{ width: 1, height: 48, background: "rgba(201,151,58,0.4)" }} />
+                <div style={{ width: 1, height: 62, background: "rgba(201,151,58,0.4)" }} />
                 <div style={{ display: "flex", alignItems: "center", marginTop: 24 }}>
                   <div style={{ width: 220, height: 1, background: "rgba(201,151,58,0.4)" }} />
-                  <div style={{ border: "1.5px solid rgba(201,151,58,0.55)", borderRadius: 8, padding: "10px 24px", background: "rgba(14,13,11,0.95)", textAlign: "center" }}>
+                  <div style={{ border: "1.5px solid rgba(201,151,58,0.55)", borderRadius: 8, padding: "10px 34px", background: "rgba(14,13,11,0.95)", textAlign: "center" }}>
                     <div className="f-sans" style={{ fontSize: 14, color: "#fad608", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>{diretoria[1].cargo}</div>
                     <div className="f-body" style={{ fontSize: 11, color: "#6b6454", marginTop: 4, maxWidth: 260 }}>{diretoria[1].desc}</div>
                   </div>
