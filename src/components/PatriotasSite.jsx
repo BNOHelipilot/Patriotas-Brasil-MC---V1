@@ -711,23 +711,23 @@ export default function PatriotasSite() {
             HISTÓRICO DE BRASÕES
           </h3>
 
-          <div className="flex flex-col items-center gap-16 max-w-lg mx-auto">
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 64, maxWidth: 480, margin: "0 auto" }}>
             {[
               { src: BRASAO_INI, alt: "Brasão Inicial", label: "Protótipo do brasão do PATRIOTAS MOTO GRUPO." },
               { src: BRASAO_MG,  alt: "Brasão Moto Grupo", label: "Brasão do PATRIOTAS MOTO GRUPO." },
               { src: BRASAO_MC,  alt: "Brasão Moto Clube", label: "Brasão do PATRIOTAS MOTO CLUBE." },
               { src: BRASAO_MC_DF, alt: "Brasão MC DF", label: "Brasão do PATRIOTAS MOTO CLUBE no estado." },
             ].map((b, i) => (
-              <div key={i} className="flex flex-col items-center w-full">
+              <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
                 <div style={{ height: 320, display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
                   <img src={b.src} alt={b.alt}
                     style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain",
                       filter: "drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
                 </div>
-                <p className="f-body mt-4 text-center" style={{ fontSize: 16, color: "#8a7a5c", lineHeight: 1.8 }}>
+                <p className="f-body" style={{ fontSize: 16, color: "#8a7a5c", lineHeight: 1.8, marginTop: 16, textAlign: "center" }}>
                   {b.label}
                 </p>
-                {i < 3 && <div className="mt-10 w-px h-10" style={{ background: "linear-gradient(to bottom, rgba(201,151,58,0.4), transparent)" }} />}
+                {i < 3 && <div style={{ width: 1, height: 40, marginTop: 32, background: "linear-gradient(to bottom, rgba(201,151,58,0.4), transparent)" }} />}
               </div>
             ))}
           </div>
