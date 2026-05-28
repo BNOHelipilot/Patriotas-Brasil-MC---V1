@@ -767,7 +767,9 @@ export default function PatriotasSite() {
 
               {/* linha vertical + VICE-PRESIDENTE: linha horizontal parte do centro */}
               <div style={{ width: 1, height: 32, background: "rgba(201,151,58,0.4)" }} />
-              <div style={{ width: "100%", display: "flex", alignItems: "center", boxSizing: "border-box", paddingLeft: "50%" }}>
+              <div style={{ width: "100%", display: "flex", alignItems: "center", boxSizing: "border-box", paddingLeft: "50%", position: "relative" }}>
+                {/* linha vertical contínua atravessando o bloco do VICE */}
+                <div style={{ position: "absolute", left: "50%", top: 0, bottom: 0, width: 1, background: "rgba(201,151,58,0.4)" }} />
                 <div style={{ width: 150, height: 1, background: "rgba(201,151,58,0.4)", flexShrink: 0 }} />
                 <div style={{ border: "1.5px solid rgba(201,151,58,0.55)", borderRadius: 8, padding: "10px 24px", background: "rgba(14,13,11,0.95)", textAlign: "center", flexShrink: 0 }}>
                   <div className="f-sans" style={{ fontSize: 14, color: "#fad608", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>{diretoria[1].cargo}</div>
@@ -778,7 +780,7 @@ export default function PatriotasSite() {
 
               {/* 4 cargos inferiores: barra horizontal no topo, linhas verticais a tocam */}
               <div style={{ position: "relative", width: "100%" }}>
-                <div style={{ position: "absolute", top: 0, left: "12%", right: "12%", height: 1, background: "rgba(201,151,58,0.4)" }} />
+                <div style={{ position: "absolute", top: 0, left: "12,2%", right: "12,2%", height: 1, background: "rgba(201,151,58,0.4)" }} />
                 <div style={{ display: "flex", gap: 12 }}>
                   {diretoria.slice(2).map((d, i) => (
                     <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
