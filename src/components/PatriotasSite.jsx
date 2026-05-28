@@ -713,15 +713,15 @@ export default function PatriotasSite() {
 
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 32, width: "100%", margin: "0 auto" }}>
             {[
-              { src: BRASAO_INI,   alt: "Brasão Inicial",    label: "Protótipo do brasão do PATRIOTAS MOTO GRUPO.", h: 320, maxW: 480 },
-              { src: BRASAO_MG,    alt: "Brasão Moto Grupo", label: "Brasão do PATRIOTAS MOTO GRUPO.",             h: 480, maxW: 480 },
-              { src: BRASAO_MC,    alt: "Brasão Moto Clube", label: "Brasão do PATRIOTAS MOTO CLUBE.",             h: 320, maxW: 480 },
-              { src: BRASAO_MC_DF, alt: "Brasão MC DF",      label: "Brasão do PATRIOTAS MOTO CLUBE no estado.",   h: 480, maxW: 480 },
+              { src: BRASAO_INI,   alt: "Brasão Inicial",    label: "Protótipo do brasão do PATRIOTAS MOTO GRUPO.", maxW: 380 },
+              { src: BRASAO_MG,    alt: "Brasão Moto Grupo", label: "Brasão do PATRIOTAS MOTO GRUPO.",             maxW: 700 },
+              { src: BRASAO_MC,    alt: "Brasão Moto Clube", label: "Brasão do PATRIOTAS MOTO CLUBE.",             maxW: 380 },
+              { src: BRASAO_MC_DF, alt: "Brasão MC DF",      label: "Brasão do PATRIOTAS MOTO CLUBE no estado.",   maxW: 700 },
             ].map((b, i) => (
               <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%", maxWidth: b.maxW, margin: "0 auto" }}>
-                <div style={{ height: b.h, display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
                   <img src={b.src} alt={b.alt}
-                    style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain",
+                    style={{ width: "100%", height: "auto",
                       filter: "drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
                 </div>
                 <p className="f-body" style={{ fontSize: 16, color: "#8a7a5c", lineHeight: 1.8, marginTop: 16, textAlign: "center" }}>
