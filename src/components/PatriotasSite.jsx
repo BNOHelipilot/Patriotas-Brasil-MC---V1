@@ -713,13 +713,13 @@ export default function PatriotasSite() {
 
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 64, maxWidth: 480, margin: "0 auto" }}>
             {[
-              { src: BRASAO_INI, alt: "Brasão Inicial", label: "Protótipo do brasão do PATRIOTAS MOTO GRUPO." },
-              { src: BRASAO_MG,  alt: "Brasão Moto Grupo", label: "Brasão do PATRIOTAS MOTO GRUPO." },
-              { src: BRASAO_MC,  alt: "Brasão Moto Clube", label: "Brasão do PATRIOTAS MOTO CLUBE." },
-              { src: BRASAO_MC_DF, alt: "Brasão MC DF", label: "Brasão do PATRIOTAS MOTO CLUBE no estado." },
+              { src: BRASAO_INI,   alt: "Brasão Inicial",    label: "Protótipo do brasão do PATRIOTAS MOTO GRUPO.", h: 320 },
+              { src: BRASAO_MG,    alt: "Brasão Moto Grupo", label: "Brasão do PATRIOTAS MOTO GRUPO.",             h: 480 },
+              { src: BRASAO_MC,    alt: "Brasão Moto Clube", label: "Brasão do PATRIOTAS MOTO CLUBE.",             h: 320 },
+              { src: BRASAO_MC_DF, alt: "Brasão MC DF",      label: "Brasão do PATRIOTAS MOTO CLUBE no estado.",   h: 480 },
             ].map((b, i) => (
               <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
-                <div style={{ height: 320, display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
+                <div style={{ height: b.h, display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
                   <img src={b.src} alt={b.alt}
                     style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain",
                       filter: "drop-shadow(0 0 36px rgba(201,151,58,0.55)) drop-shadow(0 0 10px rgba(122,140,92,0.35))" }} />
