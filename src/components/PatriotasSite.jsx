@@ -711,7 +711,7 @@ export default function PatriotasSite() {
             HISTÓRICO DE BRASÕES
           </h3>
 
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 64, maxWidth: 480, margin: "0 auto" }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 32, maxWidth: 480, margin: "0 auto" }}>
             {[
               { src: BRASAO_INI,   alt: "Brasão Inicial",    label: "Protótipo do brasão do PATRIOTAS MOTO GRUPO.", h: 320 },
               { src: BRASAO_MG,    alt: "Brasão Moto Grupo", label: "Brasão do PATRIOTAS MOTO GRUPO.",             h: 480 },
