@@ -748,7 +748,7 @@ export default function PatriotasSite() {
           style={{ background: "linear-gradient(to right, transparent, rgba(201,151,58,0.3), transparent)" }} />
         <div className="max-w-6xl mx-auto">
           <h2 className="f-sans amber mb-4" style={{ fontSize: "clamp(40px,7vw,80px)", lineHeight: 1, letterSpacing: "0.04em", color: "#fad608" }}>
-            DIREÇÃO NACIONAL
+            ORGANOGRAMA DA DIREÇÃO
           </h2>
           <p className="f-body mb-16"
             style={{ fontSize: 18, color: "#6b6454", maxWidth: 700, lineHeight: 1.9, whiteSpace: "nowrap" }}>
@@ -761,8 +761,8 @@ export default function PatriotasSite() {
 
               {/* PRESIDENTE */}
               <div style={{ border: "1.5px solid rgba(201,151,58,0.7)", borderRadius: 8, padding: "12px 40px", background: "rgba(14,13,11,0.95)", textAlign: "center" }}>
-                <div className="f-sans" style={{ fontSize: 16, color: "#fad608", letterSpacing: "0.1em" }}>{diretoria[0].cargo}</div>
-                <div className="f-body" style={{ fontSize: 11, color: "#6b6454", marginTop: 4, maxWidth: 260 }}>{diretoria[0].desc}</div>
+                <div className="f-sans" style={{ fontSize: 18, color: "#fad608", letterSpacing: "0.1em" }}>{diretoria[0].cargo}</div>
+                <div className="f-body" style={{ fontSize: 13, color: "#6b6454", marginTop: 4, maxWidth: 260 }}>{diretoria[0].desc}</div>
               </div>
 
               {/* linha vertical + VICE-PRESIDENTE: linha horizontal parte do centro */}
@@ -772,22 +772,22 @@ export default function PatriotasSite() {
                 <div style={{ position: "absolute", left: "50%", top: 0, bottom: 0, width: 1, background: "rgba(201,151,58,0.4)" }} />
                 <div style={{ width: 150, height: 1, background: "rgba(201,151,58,0.4)", flexShrink: 0 }} />
                 <div style={{ border: "1.5px solid rgba(201,151,58,0.55)", borderRadius: 8, padding: "10px 24px", background: "rgba(14,13,11,0.95)", textAlign: "center", flexShrink: 0 }}>
-                  <div className="f-sans" style={{ fontSize: 14, color: "#fad608", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>{diretoria[1].cargo}</div>
-                  <div className="f-body" style={{ fontSize: 11, color: "#6b6454", marginTop: 4, maxWidth: 260 }}>{diretoria[1].desc}</div>
+                  <div className="f-sans" style={{ fontSize: 16, color: "#fad608", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>{diretoria[1].cargo}</div>
+                  <div className="f-body" style={{ fontSize: 13, color: "#6b6454", marginTop: 4, maxWidth: 260 }}>{diretoria[1].desc}</div>
                 </div>
               </div>
               <div style={{ width: 1, height: 32, background: "rgba(201,151,58,0.4)" }} />
 
               {/* 4 cargos inferiores: barra horizontal no topo, linhas verticais a tocam */}
               <div style={{ position: "relative", width: "100%" }}>
-                <div style={{ position: "absolute", top: 0, left: "12,2%", right: "12,2%", height: 1, background: "rgba(201,151,58,0.4)" }} />
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: "rgba(201,151,58,0.4)" }} />
                 <div style={{ display: "flex", gap: 12 }}>
                   {diretoria.slice(2).map((d, i) => (
                     <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
                       <div style={{ width: 1, height: 36, background: "rgba(201,151,58,0.4)" }} />
                       <div style={{ border: "1.5px solid rgba(201,151,58,0.35)", borderRadius: 8, padding: "10px 10px", background: "rgba(14,13,11,0.95)", textAlign: "center", width: "100%" }}>
-                        <div className="f-sans" style={{ fontSize: 12, color: "#e8e0cc", letterSpacing: "0.07em" }}>{d.cargo}</div>
-                        <div className="f-body" style={{ fontSize: 11, color: "#6b6454", marginTop: 5, lineHeight: 1.5 }}>{d.desc}</div>
+                        <div className="f-sans" style={{ fontSize: 14, color: "#e8e0cc", letterSpacing: "0.07em" }}>{d.cargo}</div>
+                        <div className="f-body" style={{ fontSize: 13, color: "#6b6454", marginTop: 5, lineHeight: 1.5 }}>{d.desc}</div>
                       </div>
                     </div>
                   ))}
