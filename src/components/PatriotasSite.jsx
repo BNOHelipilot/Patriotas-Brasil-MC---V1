@@ -1112,9 +1112,9 @@ export default function PatriotasSite() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {[
               { pelotao: "SEDE NACIONAL", uf: "AM", cidade: "Manaus", ig: "@patriotasbrasilmc", igHref: "https://www.instagram.com/patriotasbrasilmc", destaque: true },
-              { pelotao: "PELOTÃO DF",    uf: "DF", cidade: "Brasília",       ig: "@patriotasmc_df", igHref: "#", destaque: false },
-              { pelotao: "PELOTÃO RJ",    uf: "RJ", cidade: "Rio de Janeiro", ig: "@patriotasmc_rj", igHref: "#", destaque: false },
-              { pelotao: "PELOTÃO MS",    uf: "MS", cidade: "Campo Grande",   ig: "@patriotasmc_ms", igHref: "#", destaque: false },
+              { pelotao: "PELOTÃO DF",    uf: "DF", cidade: "Brasília",       ig: "@patriotasbrasillemcdf", igHref: "https://www.instagram.com/patriotasbrasillemcdf?igsh=bGNiYnI3Yzc0bjl0", destaque: false },
+              { pelotao: "PELOTÃO RJ",    uf: "RJ", cidade: "Rio de Janeiro", ig: "@patriotasbrasilmotocluberj", igHref: "https://www.instagram.com/patriotasbrasilmotocluberj?igsh=ZmFsdnBhNWJncjgy", destaque: false },
+              { pelotao: "PELOTÃO MS",    uf: "MS", cidade: "Campo Grande",   ig: "@patriotasbrasilmotoclubems", igHref: "https://www.instagram.com/patriotasbrasilmotoclubems?igsh=aGQ4NWh0bG1mcjRz", destaque: false },
               { pelotao: "PELOTÃO SP",    uf: "SP", cidade: "Taubaté",        ig: "@patriotas.lemc.sp", igHref: "https://www.instagram.com/patriotas.lemc.sp?igsh=cHFlcmFyeTZiMGtu", destaque: false },
             ].map((p, i) => (
               <div key={i} className="leather-card patch p-5 flex flex-col gap-3"
