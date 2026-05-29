@@ -791,7 +791,7 @@ export default function PatriotasSite() {
 
               {/* 4 cargos inferiores: barra horizontal no topo, linhas verticais a tocam */}
               <div style={{ position: "relative", width: "100%" }}>
-                <div style={{ position: "absolute", top: 0, left: 160, right: 160, height: 1, background: "rgba(201,151,58,0.4)" }} />
+                <div style={{ position: "absolute", top: 0, left: 140, right: 140, height: 1, background: "rgba(201,151,58,0.4)" }} />
                 <div style={{ display: "flex", gap: 12 }}>
                   {diretoria.slice(2).map((d, i) => (
                     <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
@@ -1096,6 +1096,58 @@ export default function PatriotasSite() {
             }}>
             QUERO FAZER PARTE
           </button>
+        </div>
+      </section>
+
+      {/* ════════════════ REDES SOCIAIS DOS PELOTÕES ════════════════ */}
+      <section className="leather-bg relative py-20 px-6 border-t" style={{ borderColor: "rgba(201,151,58,0.1)" }}>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="f-sans mb-4" style={{ fontSize: "clamp(28px,5vw,52px)", color: "#fad608", letterSpacing: "0.04em", lineHeight: 1 }}>
+            REDES SOCIAIS DOS PELOTÕES
+          </h2>
+          <p className="f-body mb-10" style={{ fontSize: 15, color: "#6b6454", lineHeight: 1.8 }}>
+            Siga os pelotões e acompanhe as atividades de cada região.
+          </p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {[
+              { pelotao: "SEDE NACIONAL", uf: "AM", cidade: "Manaus", ig: "@patriotasbrasilmc", igHref: "https://www.instagram.com/patriotasbrasilmc", destaque: true },
+              { pelotao: "PELOTÃO DF",    uf: "DF", cidade: "Brasília",       ig: "@patriotasmc_df", igHref: "#", destaque: false },
+              { pelotao: "PELOTÃO RJ",    uf: "RJ", cidade: "Rio de Janeiro", ig: "@patriotasmc_rj", igHref: "#", destaque: false },
+              { pelotao: "PELOTÃO MS",    uf: "MS", cidade: "Campo Grande",   ig: "@patriotasmc_ms", igHref: "#", destaque: false },
+              { pelotao: "PELOTÃO SP",    uf: "SP", cidade: "Taubaté",        ig: "@patriotasmc_sp", igHref: "#", destaque: false },
+            ].map((p, i) => (
+              <div key={i} className="leather-card patch p-5 flex flex-col gap-3"
+                style={{ borderColor: p.destaque ? "rgba(201,151,58,0.45)" : "rgba(122,140,92,0.25)" }}>
+                {/* UF badge + nome */}
+                <div className="flex items-center gap-3">
+                  <div className="f-sans flex-shrink-0 flex items-center justify-center"
+                    style={{ width: 42, height: 42, border: `1px solid ${p.destaque ? "rgba(201,151,58,0.5)" : "rgba(122,140,92,0.35)"}`, borderRadius: 6, fontSize: 16, color: p.destaque ? "#fad608" : "#7a8c5c", background: "rgba(14,13,11,0.9)" }}>
+                    {p.uf}
+                  </div>
+                  <div>
+                    <div className="f-stencil" style={{ fontSize: 9, letterSpacing: "0.3em", color: p.destaque ? "#c9973a" : "#7a8c5c" }}>{p.pelotao}</div>
+                    <div className="f-body" style={{ fontSize: 13, color: "#8a7a5c" }}>{p.cidade}</div>
+                  </div>
+                </div>
+
+                {/* Instagram */}
+                <a href={p.igHref} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 group"
+                  style={{ textDecoration: "none" }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                    style={{ color: p.destaque ? "#c9973a" : "#6b6454", flexShrink: 0 }}>
+                    <rect x="2" y="2" width="20" height="20" rx="5" />
+                    <circle cx="12" cy="12" r="5" />
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                  </svg>
+                  <span className="f-stencil" style={{ fontSize: 10, letterSpacing: "0.15em", color: p.destaque ? "#c9973a" : "#6b6454" }}>
+                    {p.ig}
+                  </span>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
