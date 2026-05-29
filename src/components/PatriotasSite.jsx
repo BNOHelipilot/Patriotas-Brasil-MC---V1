@@ -151,10 +151,10 @@ export default function PatriotasSite() {
   ];
 
   const presidentes_regionais = [
-    { nome: "A DEFINIR", pelotao: "PELOTÃO DF", local: "Brasília · DF", foto: PR_DF },
-    { nome: "A DEFINIR", pelotao: "PELOTÃO RJ", local: "Rio de Janeiro · RJ", foto: PR_RJ },
-    { nome: "A DEFINIR", pelotao: "PELOTÃO MS", local: "Campo Grande · MS", foto: PR_MS },
-    { nome: "A DEFINIR", pelotao: "PELOTÃO SP", local: "Taubaté · SP", foto: PR_SP },
+    { nome: "SOUZA LIMA", pelotao: "PELOTÃO DF", local: "Brasília · DF", foto: PR_DF },
+    { nome: "CORRÊA", pelotao: "PELOTÃO RJ", local: "Rio de Janeiro · RJ", foto: PR_RJ },
+    { nome: "BATISTA", pelotao: "PELOTÃO MS", local: "Campo Grande · MS", foto: PR_MS },
+    { nome: "BRUNO", pelotao: "PELOTÃO SP", local: "Taubaté · SP", foto: PR_SP },
   ];
 
   const galeria = Array(9).fill(null).map((_, i) => ({
