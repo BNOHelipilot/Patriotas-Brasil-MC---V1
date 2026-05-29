@@ -32,6 +32,10 @@ const P01 = "/images/presidente_01.png";
 const P02 = "/images/Presidente_02.png";
 const P03 = "/images/Presidente_03.png";
 const P04 = "/images/presidente_04.png";
+const PR_DF = "/images/presidente_regional_df.png";
+const PR_RJ = "/images/presidente_regional_rj.png";
+const PR_MS = "/images/presidente_regional_ms.png";
+const PR_SP = "/images/presidente_regional_sp.png";
 
 export default function PatriotasSite() {
   const [scrolled, setScrolled] = useState(false);
@@ -144,6 +148,13 @@ export default function PatriotasSite() {
     { nome: "PEREIRA SOUZA", periodo: "2020 – 2024", local: "Manaus · AM", foto: P02 },
     { nome: "BRAGA", periodo: "2024 – 2026", local: "Manaus · AM", foto: P03 },
     { nome: "FABINHO", periodo: "2026 – atual", local: "Manaus · AM", foto: P04 },
+  ];
+
+  const presidentes_regionais = [
+    { nome: "A DEFINIR", pelotao: "PELOTÃO DF", local: "Brasília · DF", foto: PR_DF },
+    { nome: "A DEFINIR", pelotao: "PELOTÃO RJ", local: "Rio de Janeiro · RJ", foto: PR_RJ },
+    { nome: "A DEFINIR", pelotao: "PELOTÃO MS", local: "Campo Grande · MS", foto: PR_MS },
+    { nome: "A DEFINIR", pelotao: "PELOTÃO SP", local: "Taubaté · SP", foto: PR_SP },
   ];
 
   const galeria = Array(9).fill(null).map((_, i) => ({
@@ -780,7 +791,7 @@ export default function PatriotasSite() {
 
               {/* 4 cargos inferiores: barra horizontal no topo, linhas verticais a tocam */}
               <div style={{ position: "relative", width: "100%" }}>
-                <div style={{ position: "absolute", top: 0, left: 50, right: 50, height: 1, background: "rgba(201,151,58,0.4)" }} />
+                <div style={{ position: "absolute", top: 0, left: 160, right: 160, height: 1, background: "rgba(201,151,58,0.4)" }} />
                 <div style={{ display: "flex", gap: 12 }}>
                   {diretoria.slice(2).map((d, i) => (
                     <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
@@ -933,6 +944,50 @@ export default function PatriotasSite() {
               </div>
             ))}
           </div>
+
+          {/* ── PRESIDENTES REGIONAIS ── */}
+          <div className="divider mt-16 mb-10" />
+          <h3 className="f-sans mb-4" style={{ fontSize: "clamp(28px,5vw,52px)", color: "#fad608", letterSpacing: "0.04em", lineHeight: 1 }}>
+            PRESIDENTES REGIONAIS
+          </h3>
+          <p className="f-body mb-10" style={{ fontSize: 16, color: "#6b6454", maxWidth: 520, lineHeight: 1.8 }}>
+            Líderes que conduzem os pelotões regionais, representando os Patriotas em cada estado.
+          </p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {presidentes_regionais.map((p, i) => (
+              <div key={i} className="leather-card patch overflow-hidden"
+                style={{ borderColor: "rgba(122,140,92,0.3)" }}>
+                {/* foto */}
+                <div style={{ height: 280, overflow: "hidden", position: "relative", background: "#0e0d0b", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  {p.foto ? (
+                    <img src={p.foto} alt={p.nome}
+                      style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain",
+                        filter: "grayscale(20%) contrast(1.05)" }} />
+                  ) : (
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      strokeWidth="1" style={{ color: "#2a2518" }}>
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  )}
+                </div>
+                {/* info */}
+                <div className="text-center px-4 py-5">
+                  <div className="f-stencil mb-1" style={{ fontSize: 11, letterSpacing: "0.35em", color: "#7a8c5c" }}>
+                    {p.pelotao}
+                  </div>
+                  <div className="f-mad mb-1" style={{ fontSize: 18, color: "#e8e0cc", letterSpacing: "0.05em" }}>
+                    {p.nome}
+                  </div>
+                  <div className="f-stencil mt-1" style={{ fontSize: 11, color: "#4a4035", letterSpacing: "0.2em" }}>
+                    {p.local}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
           {/* Nota de rodapé */}
           <div className="mt-10 flex items-center gap-4">
             <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(201,151,58,0.3), transparent)" }}/>
