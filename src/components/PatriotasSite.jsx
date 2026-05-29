@@ -780,7 +780,7 @@ export default function PatriotasSite() {
 
               {/* 4 cargos inferiores: barra horizontal no topo, linhas verticais a tocam */}
               <div style={{ position: "relative", width: "100%" }}>
-                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: "rgba(201,151,58,0.4)" }} />
+                <div style={{ position: "absolute", top: 0, left: 5, right: 5, height: 1, background: "rgba(201,151,58,0.4)" }} />
                 <div style={{ display: "flex", gap: 12 }}>
                   {diretoria.slice(2).map((d, i) => (
                     <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
