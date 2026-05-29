@@ -1115,7 +1115,7 @@ export default function PatriotasSite() {
               { pelotao: "PELOTÃO DF",    uf: "DF", cidade: "Brasília",       ig: "@patriotasmc_df", igHref: "#", destaque: false },
               { pelotao: "PELOTÃO RJ",    uf: "RJ", cidade: "Rio de Janeiro", ig: "@patriotasmc_rj", igHref: "#", destaque: false },
               { pelotao: "PELOTÃO MS",    uf: "MS", cidade: "Campo Grande",   ig: "@patriotasmc_ms", igHref: "#", destaque: false },
-              { pelotao: "PELOTÃO SP",    uf: "SP", cidade: "Taubaté",        ig: "@patriotasmc_sp", igHref: "#", destaque: false },
+              { pelotao: "PELOTÃO SP",    uf: "SP", cidade: "Taubaté",        ig: "@patriotas.lemc.sp", igHref: "https://www.instagram.com/patriotas.lemc.sp?igsh=cHFlcmFyeTZiMGtu", destaque: false },
             ].map((p, i) => (
               <div key={i} className="leather-card patch p-5 flex flex-col gap-3"
                 style={{ borderColor: p.destaque ? "rgba(201,151,58,0.45)" : "rgba(122,140,92,0.25)" }}>
