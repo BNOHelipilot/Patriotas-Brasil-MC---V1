@@ -1141,7 +1141,7 @@ export default function PatriotasSite() {
                     <circle cx="12" cy="12" r="5" />
                     <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                   </svg>
-                  <span className="f-stencil" style={{ fontSize: 10, letterSpacing: "0.15em", color: p.destaque ? "#c9973a" : "#6b6454" }}>
+                  <span className="f-stencil" style={{ fontSize: 9, letterSpacing: "0.05em", color: p.destaque ? "#c9973a" : "#6b6454", wordBreak: "break-all" }}>
                     {p.ig}
                   </span>
                 </a>
