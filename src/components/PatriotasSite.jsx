@@ -32,6 +32,7 @@ const P01 = "/images/presidente_01.png";
 const P02 = "/images/Presidente_02.png";
 const P03 = "/images/Presidente_03.png";
 const P04 = "/images/presidente_04.png";
+const OS_FUNDADORES = "/images/os_fundadores.png";
 const PR_DF = "/images/presidente_regional_df.png";
 const PR_RJ = "/images/presidente_regional_rj.png";
 const PR_MS = "/images/presidente_regional_ms.png";
@@ -602,25 +603,16 @@ export default function PatriotasSite() {
           {/* ── FOTO COLETIVA ── */}
           <div className="mb-16">
             <div className="leather-card patch relative overflow-hidden"
-              style={{ borderColor: "rgba(201,151,58,0.4)", aspectRatio: "16/7" }}>
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  strokeWidth="1" style={{ color: "#2a2518" }}>
-                  <rect x="3" y="3" width="18" height="18" rx="2"/>
-                  <circle cx="8.5" cy="8.5" r="1.5"/>
-                  <path d="M21 15l-5-5L5 21"/>
-                </svg>
-                <span className="f-stencil" style={{ fontSize: 10, letterSpacing: "0.4em", color: "#2a2518" }}>
-                  FOTO DOS 15 FUNDADORES · 26 · ABR · 2016
-                </span>
-              </div>
-              {/* Overlay cantos com data */}
+              style={{ borderColor: "rgba(201,151,58,0.4)" }}>
+              <img src={OS_FUNDADORES} alt="Os 15 Fundadores do Patriotas Brasil MC"
+                style={{ width: "100%", height: "auto", display: "block",
+                  filter: "grayscale(15%) contrast(1.05)" }} />
               <div className="absolute top-4 left-4 f-stencil amber"
                 style={{ fontSize: 9, letterSpacing: "0.35em" }}>
                 PATRIOTAS BRASIL MC
               </div>
               <div className="absolute bottom-4 right-4 f-stencil"
-                style={{ fontSize: 9, letterSpacing: "0.35em", color: "#4a4035" }}>
+                style={{ fontSize: 9, letterSpacing: "0.35em", color: "#e8e0cc" }}>
                 MANAUS · AM · MMXXI
               </div>
             </div>
