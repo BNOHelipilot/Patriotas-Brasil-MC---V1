@@ -158,10 +158,10 @@ export default function PatriotasSite() {
     { nome: "BRUNO", pelotao: "PELOTÃO SP", local: "Taubaté · SP", foto: PR_SP },
   ];
 
-  const galeria = Array(9).fill(null).map((_, i) => ({
+  const galeria = [1,2,3,4,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26].map((n, i) => ({
     id: i,
-    titulo: `PATRIOTAS · FOTO ${i + 1}`,
-    placeholder: true,
+    src: `/images/${n}.jpeg`,
+    titulo: `PATRIOTAS · FOTO ${String(n).padStart(2, "0")}`,
   }));
 
   const navLinks = [
@@ -969,7 +969,7 @@ export default function PatriotasSite() {
                   <div className="f-stencil mb-1" style={{ fontSize: 11, letterSpacing: "0.35em", color: "#7a8c5c" }}>
                     {p.pelotao}
                   </div>
-                  <div className="f-mad mb-1" style={{ fontSize: 18, color: "#e8e0cc", letterSpacing: "0.05em" }}>
+                  <div className="f-sans mb-1" style={{ fontSize: 18, color: "#e8e0cc", letterSpacing: "0.05em" }}>
                     {p.nome}
                   </div>
                   <div className="f-stencil mt-1" style={{ fontSize: 11, color: "#4a4035", letterSpacing: "0.2em" }}>
@@ -1009,32 +1009,17 @@ export default function PatriotasSite() {
                 onClick={() => setLightbox(i)}
                 className="leather-card patch relative overflow-hidden cursor-pointer group"
                 style={{ aspectRatio: "4/3", borderColor: "rgba(122,140,92,0.2)" }}>
-                {/* placeholder foto */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-2"
-                  style={{ background: "linear-gradient(135deg,#1a1712,#141310)" }}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    strokeWidth="1" style={{ color: "#2a2518" }}>
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <path d="M21 15l-5-5L5 21" />
-                  </svg>
-                  <span className="f-stencil" style={{ fontSize: 8, letterSpacing: "0.3em", color: "#2a2518" }}>
-                    FOTO {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
-
+                <img src={item.src} alt={item.titulo}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", filter: "grayscale(10%) contrast(1.05)" }} />
                 {/* hover overlay */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
-                  style={{ background: "rgba(201,151,58,0.1)" }}>
+                  style={{ background: "rgba(201,151,58,0.15)" }}>
                   <div className="f-stencil amber" style={{ fontSize: 9, letterSpacing: "0.3em" }}>VER</div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="f-stencil text-center" style={{ fontSize: 9, letterSpacing: "0.3em", color: "#3a3028" }}>
-            [ FOTOS SERÃO ADICIONADAS PELO CLUBE ]
-          </div>
           {/* Nota de rodapé */}
           <div className="mt-10 flex items-center gap-4">
             <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(201,151,58,0.3), transparent)" }}/>
@@ -1218,14 +1203,8 @@ export default function PatriotasSite() {
             onClick={(e) => e.stopPropagation()}>
             <div className="aspect-video flex items-center justify-center mb-4"
               style={{ background: "#0e0d0b" }}>
-              <div className="text-center">
-                <div className="f-stencil amber mb-2" style={{ fontSize: 10, letterSpacing: "0.35em" }}>
-                  FOTO {String(lightbox + 1).padStart(2, "0")}
-                </div>
-                <div className="f-stencil" style={{ fontSize: 9, color: "#3a3028", letterSpacing: "0.3em" }}>
-                  [ IMAGEM AQUI ]
-                </div>
-              </div>
+              <img src={galeria[lightbox].src} alt={galeria[lightbox].titulo}
+                style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
             </div>
             <div className="flex justify-between items-center">
               <button onClick={() => setLightbox(Math.max(0, lightbox - 1))}
