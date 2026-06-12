@@ -540,7 +540,7 @@ export default function PatriotasSite() {
               {
                 data: "xx · xxx · 2025",
                 titulo: "LEMC - LAW ENFORCMENT MOTO CLUBE",
-                texto: `O Patriotas Brasil Moto Clube passa a ser considerado LE bla bla bla .......`,
+                texto: `O Patriotas Brasil Moto Clube passa a integrar o universo dos LEMC — Law Enforcement Motorcycle Clubs, agremiações formadas por integrantes ativos e veteranos das Forças Armadas, Forças Auxiliares e da Segurança Pública. Mais que um patch, essa identidade representa um código de honra, disciplina e camaradagem que segue válido fora da farda — reconhecido por irmãos de estrada no Brasil e no mundo.`,
               },
             ].map((item, i) => (
               <div key={i} className="leather-card patch p-7 scratched"
